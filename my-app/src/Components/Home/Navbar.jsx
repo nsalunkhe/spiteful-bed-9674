@@ -59,12 +59,12 @@ export default function Navbar() {
       >
       ActiveWear
       </NavLink>
-      <NavLink
+      {/* <NavLink
           style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
         to="/Beauty"
       >
       Beauty
-      </NavLink>
+      </NavLink> */}
       <NavLink
           style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
         to="/Designer"
@@ -95,19 +95,19 @@ export default function Navbar() {
       >
       Men
       </NavLink>
-      <NavLink
+      {/* <NavLink
           style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
         to="/YoungAdult"
       >
       YoungAdult
-      </NavLink>
-      <NavLink
+      </NavLink> */}
+      {/* <NavLink
           style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
         to="/Payment"
       >
       Payment
       </NavLink>
-      
+       */}
       <NavLink
           style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
         to="/Checkout"
