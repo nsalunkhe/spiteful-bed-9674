@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/Home/Navbar';
 import AllRoutes from './AllRoutes/AllRoutes';
 function App() {
   return (
