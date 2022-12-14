@@ -14,7 +14,7 @@ const Products = () => {
   return (
     <div>
       <h1>PRODUCTS</h1>
-      <MapData {...Products}/>
+      <MapData Products={Products}/>
 
 
     </div>
