@@ -1,8 +1,8 @@
 import React from 'react'
-import Form from "../Components/Niranjan/Form"
+
 const Checkout = () => {
   return (
-    <div><Form/></div>
+    <div></div>
    
   )
 }
