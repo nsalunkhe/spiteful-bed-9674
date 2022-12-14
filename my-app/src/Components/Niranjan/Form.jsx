@@ -123,8 +123,9 @@ export default function Form() {
                 }}
               >
                 <div style={{display:"flex",justifyContent:"center",gap:"20px"}}>
-                  <h2 style={{color:"navyBlue"}}>PAY WITH N-PAY</h2>
-                <img src={paylogo} style={{width:"50px",height:"50px"}} alt=""/>
+                <img src={paylogo} style={{width:"50px",height:"50px",borderRadius:"50%"}} alt=""/>
+                  <h2 style={{color:"navyBlue",marginTop:"5px"}}>PAY WITH N-PAY</h2>
+                <img src={paylogo} style={{width:"50px",height:"50px",borderRadius:"50%"}} alt=""/>
                 </div>
                
               </Typography>
