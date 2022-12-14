@@ -10,7 +10,7 @@ import Kids from "../Components/Home/Kids";
 import Login from "../Pages/Login";
 import Men from "../Components/Home/Men";
 import Payment from "../Pages/Payment";
-import ProductPage from "../Pages/ProductPage";
+import Products from "../Pages/Products";
 import Signup from "../Pages/Signup";
 import Women from "../Components/Home/Women";
 import YoungAdult from "../Components/Home/YoungAdult";
@@ -30,7 +30,7 @@ export default function AllRoutes(){
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Men" element={<Men/>}></Route>
             <Route path="/Payment" element={<Payment/>}></Route>
-            <Route path="/ProductPage" element={<ProductPage/>}></Route>
+            <Route path="/Products" element={<Products/>}></Route>
             <Route path="/Signup" element={<Signup/>}></Route>
             <Route path="/Women" element={<Women/>}></Route>
             <Route path="/YoungAdult" element={<YoungAdult/>}></Route>
