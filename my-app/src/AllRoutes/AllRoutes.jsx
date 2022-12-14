@@ -15,6 +15,7 @@ import Signup from "../Pages/Signup";
 import Women from "../Components/Home/Women";
 import YoungAdult from "../Components/Home/YoungAdult";
 import Admin from "../Pages/Admin";
+import Cart from "../Pages/Cart";
 
 export default function AllRoutes(){
     return(
@@ -35,6 +36,7 @@ export default function AllRoutes(){
             <Route path="/Women" element={<Women/>}></Route>
             <Route path="/YoungAdult" element={<YoungAdult/>}></Route>
             <Route path="/Admin" element={<Admin/>}></Route>
+            <Route path="/Cart" element={<Cart/>}></Route>
         </Routes>
     )
 }
