@@ -31,7 +31,7 @@ export default function Navbar() {
       </NavLink>
       <NavLink
         style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
-        to="/ProductPage"
+        to="/Products"
       >
         Product-Page
       </NavLink>
