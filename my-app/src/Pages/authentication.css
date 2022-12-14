@@ -1,0 +1,138 @@
+.login-main-container,
+.signup-main-container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #f6f6f6;
+}
+.login-main-container {
+  background-color: white;
+}
+.login-main-container > div,
+.signup-main-container > div {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+.login-main-container > div img {
+  width: 80%;
+  /* border: 1px solid green; */
+}
+.login-container,
+.signup-container {
+  width: 90%;
+  margin: auto;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #ffffff;
+}
+.login-container {
+  background-color: white;
+}
+.signup-container {
+  background-color: #f6f6f6;
+}
+.login-container > div:nth-child(2) {
+  width: 100%;
+  /* border: 1px solid black; */
+}
+.login-container form {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 20px;
+}
+.login-container form input {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+.login-container form #submit {
+  margin-top: 25px;
+  background-color: rgb(57, 57, 169);
+  color: white;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+.login-container form #submit:hover {
+  background-color: rgb(25, 25, 109);
+}
+.login-container .google-login {
+  display: grid;
+  grid-template-columns: 2.5fr 7.5fr;
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #1567e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1px;
+  cursor: pointer;
+}
+.login-container .google-login > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.login-container .google-login > div:nth-child(1) {
+  border: 1px solid white;
+  padding: 9px 1px;
+  border-radius: 5px;
+}
+.login-container .google-login img {
+  width: 30%;
+}
+.login-container .google-login + div {
+  margin: 40px 0;
+  text-align: center;
+}
+.login-container a {
+  color: blue;
+}
+p {
+  text-align: center;
+}
+.singleuser {
+  width: 70%;
+  margin: 40px auto;
+  padding: 50px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  text-align: center;
+}
+.singleuser > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.singleuser > div p {
+  color: red;
+  font-weight: 400;
+}
+.admin-check {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.admin-check input {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}

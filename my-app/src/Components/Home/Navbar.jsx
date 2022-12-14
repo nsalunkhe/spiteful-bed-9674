@@ -114,6 +114,13 @@ export default function Navbar() {
       >
       Checkout
       </NavLink>
+
+      <NavLink
+          style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
+        to="/Cart"
+      >
+      Cart
+      </NavLink>
     </div>
   );
 }
