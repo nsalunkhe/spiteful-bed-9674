@@ -1,28 +1,28 @@
 import React from 'react'
 import { Grid,Box,Button,Heading, GridItem,Flex ,Text} from '@chakra-ui/react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { fetchProducts,removeItem } from '../Components/Cart/Redux/cart.actions'
+
+
+import MapCartData from '../Components/Cart/mapCartData'
+
 
 const Cart = () => {
-    let activeStyle = 
-    { color: 'black',
-     
-     textDecorationLine:"none",
-     cursor:"pointer",
-     backgroundColor:"grey"
-     
- 
- }
+
+
+  const cartProducts = useSelector((store)=>(store.cartManager.data))
+
+  const dispatch = useDispatch()
+  console.log(cartProducts)
+  useEffect(()=>{
+    fetchProducts(dispatch)
    
-   let normalStyle = { 
-    color: 'black',
-     
-     textDecorationLine:"none",
-     cursor:"pointer",
-    
-   } 
-
-   //style={({ isActive }) => (isActive ?activeStyle :normalStyle )}
-
+  },[])
+ 
   return (
+
+   
     <Grid style={{padding:"5%"}}>
         <Box style={{width:"50%",textAlign:"left"}}>
            <Flex marginBottom="30px">
@@ -30,11 +30,16 @@ const Cart = () => {
           <Button  >Save for Later</Button>
             </Flex> 
          
-          <Text fontSize='2xl' >Your bag is empty</Text>
-          <Text>Sign in to see what you may have saved before, or start shopping now!</Text>   
+          {/* <Text fontSize='2xl' >Your bag is empty</Text>
+          <Text>Sign in to see what you may have saved before, or start shopping now!</Text>    */}
+
+           <Box>
+          <MapCartData Products={cartProducts}/>
+        
+          </Box> 
 
           
-        <Button
+         <Button
          w={'full'}
          maxW={'md'}
         height='48px'

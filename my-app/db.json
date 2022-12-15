@@ -5477,5 +5477,77 @@
             "ideal_for": "Men",
             "is_in_stock": "In Stock"
         }
+    ],
+
+    "Cartitems":[
+        {
+            "id": 6937673,
+            "title": "IMARA Women Black Solid Top",
+            "brand": "IMARA",
+            "size": "XL",
+            "product_type": "Top",
+            "variant_price": 959,
+            "variant_mrp": 1599,
+            "dominant_material": "Polyester",
+            "care_instructions": "Polyester | Dry-clean",
+            "actual_color": "Black",
+            "dominant_color": "Black",
+            "images": [
+                "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/88c6ad02-eab9-42c8-8b8e-cbcd8f015d361535627393491-IMARA-Women-Black-Solid-Top-7471535627393374-1.jpg",
+                "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/06f7fe3a-08c5-4718-9d5b-d2e82f7806a71535627393473-IMARA-Women-Black-Solid-Top-7471535627393374-2.jpg",
+                "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/9f9ad6fe-3260-4bf8-9088-59dd7351a0f41535627393453-IMARA-Women-Black-Solid-Top-7471535627393374-3.jpg",
+                "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/8e268984-4d24-4563-b3ee-c2ff0f2c600c1535627393440-IMARA-Women-Black-Solid-Top-7471535627393374-4.jpg",
+                "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/bf975857-fee6-4685-9630-ca7cd4f13d631535629577797-IMARA-Women-Black-Solid-Top-81535629577403-5.jpg"
+            ],
+            "type": "Clothing/Women/Tops/IMARA/More by IMARA",
+            "ideal_for": "Women",
+            "is_in_stock": "Out of Stock"
+        },
+        {
+            "id": 7441182,
+            "title": "House of Pataudi Men Black Printed Straight Kurta",
+            "brand": "House of Pataudi",
+            "size": "XL",
+            "product_type": "Straight Kurta",
+            "variant_price": 799,
+            "variant_mrp": 1999,
+            "dominant_material": "cotton",
+            "care_instructions": "100% cottonMachine-wash",
+            "actual_color": "Black",
+            "dominant_color": "Black",
+            "images": [
+                "http://assets.myntassets.com/v1/assets/images/7441182/2018/11/10/7f473119-8e08-4548-b5f3-689c25b698b11541830165496-House-of-Pataudi-Men-Black-Printed-Straight-Kurta-3381541830-1.jpg",
+                "http://assets.myntassets.com/v1/assets/images/7441182/2018/11/10/28c93a4d-ff32-4418-a213-d6c8d8ce4a761541830165474-House-of-Pataudi-Men-Black-Printed-Straight-Kurta-3381541830-2.jpg",
+                "http://assets.myntassets.com/v1/assets/images/7441182/2018/11/10/d859a4ad-46e8-4a00-8fb0-581ad42371ff1541830165454-House-of-Pataudi-Men-Black-Printed-Straight-Kurta-3381541830-3.jpg",
+                "http://assets.myntassets.com/v1/assets/images/7441182/2018/11/10/f5427679-c669-42b7-86a1-9aec1d1837f81541830165438-House-of-Pataudi-Men-Black-Printed-Straight-Kurta-3381541830-4.jpg",
+                ""
+            ],
+            "type": "Clothing/Men/Kurtas/House of Pataudi/More by House of Pataudi",
+            "ideal_for": "Men",
+            "is_in_stock": "In Stock"
+        },
+        
+        {
+            "id": 1314889,
+            "title": "Dupatta Bazaar Pink Dupatta",
+            "brand": "Dupatta Bazaar",
+            "size": "Onesize",
+            "product_type": "Dupatta",
+            "variant_price": 349,
+            "variant_mrp": 499,
+            "dominant_material": "Chiffon",
+            "care_instructions": "Chiffon | Hand-wash",
+            "actual_color": "Pink",
+            "dominant_color": "Pink",
+            "images": [
+                "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070320-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-1.jpg",
+                "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070226-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-2.jpg",
+                "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070149-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-3.jpg"
+            ],
+            "type": "Clothing/Women/Dupatta/Dupatta Bazaar/More by Dupatta Bazaar",
+            "ideal_for": "Women",
+            "is_in_stock": "In Stock"
+        }
+
     ]
 }
