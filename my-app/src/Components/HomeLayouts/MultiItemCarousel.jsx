@@ -3,7 +3,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { ChevronLeftIcon, ChevronRightIcon } from '@chakra-ui/icons';
 import { Box, HStack, Link, Text, VStack } from '@chakra-ui/react';
-import { Products } from './Products';
 
 const banner1 = "/Homepage/img6.png"
 const banner2 = "/Homepage/img7.png"
@@ -13,8 +12,8 @@ const Prev = (props) => {
   const { className, onClick } = props;
   return (
     <>
-      <Box zIndex={"10"} position={"absolute"} top={"40%"} left={"0px"} onClick={onClick}>
-        <ChevronLeftIcon boxSize={8} color={"#f38f2f"} />
+      <Box zIndex={"10"} position={"absolute"} top={"32%"} left={"0px"} onClick={onClick}>
+        <ChevronLeftIcon boxSize={10} color={"#3f4246"} />
       </Box>
     </>
   );
@@ -25,8 +24,8 @@ const Next = (props) => {
   const { className, onClick } = props;
   return (
     <>
-      <Box zIndex={"10"} position={"absolute"} top={"40%"} right={"0px"} onClick={onClick}>
-        <ChevronRightIcon boxSize={8} color={"#f38f2f"} />
+      <Box zIndex={"10"} position={"absolute"} top={"32%"} right={"0px"} onClick={onClick}>
+        <ChevronRightIcon boxSize={10} color={"#3f4246"} />
       </Box>
     </>
   );
