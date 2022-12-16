@@ -4,6 +4,8 @@ import React from 'react'
 import BannerSlider from '../Components/HomeLayouts/BannerSlider'
 import { CatelogCarousel } from '../Components/HomeLayouts/CatelogCarousel/CatelogCarousel'
 import { Footer } from '../Components/HomeLayouts/Footer'
+import { Gift2Carousel } from '../Components/HomeLayouts/Gift2Carousel/Gift2Carousel'
+import { GiftCarousel } from '../Components/HomeLayouts/GiftCarousel/GiftCarousel'
 import { ProductCarousel } from '../Components/HomeLayouts/ProductCarousel/ProductCarousel'
 
 const products = [
@@ -306,7 +308,21 @@ const products = [
     "ideal_for": "Women",
     "is_in_stock": "Out of Stock"
   }
-]
+];
+
+
+const Gifts1 = [
+  { image: "/Homepage/gift1.PNG", title: "Our Editor's Guide to Dressing for the Holidays"},
+  { image: "/Homepage/gift2.PNG", title: "Holiday Gifts from Black-Owned Brands to Buy Now"},
+  { image: "/Homepage/gift3.PNG", title: "Holiday Tradition & Nostalgia with Leslie Odom Jr. & Family"}
+];
+
+const Gifts2 = [
+  { image: "/Homepage/gift4.PNG", title: "The Gift of Choice", description: "Get them what they really want with a Nordstrom Gift Card.", links: ["Gift Cards & eGift Cards"] },
+  { image: "/Homepage/gift5.PNG", title: "Gift Wrapping", description: "We make it easy with festive options. Shop in store or online to see your choices.", links: ["Learn More"] },
+  { image: "/Homepage/gift6.PNG", title: "Make Memories Together", description: "Festivities are in full swing with events like Santa Greetings, Holiday Breakfasts, Letters to Santa, virtual livestreams and more.", links: ["Explore Events"] },
+  { image: "/Homepage/gift7.PNG", title: "Free Style Help—in Stores or Online", description: "Get festive fashion advice from our stylists.", links: ["Learn More", "Book an Appointment"] }
+];
 
 const Home = () => {
 
@@ -329,9 +345,55 @@ const Home = () => {
 
       <BannerSlider />
 
-      <ProductCarousel data={products}/>
+      <ProductCarousel data={products} boolean={true} />
+
+      <UnorderedList m={"50px auto"} w={"95%"}>
+        <Image src={"/Homepage/fullLine.PNG"} alt={"line"} />
+        <Text m={"30px auto"} letterSpacing={"3px"} fontWeight={"500"} fontSize={{ base: "14px", sm: "16px", md: "18px", lg: "20px" }}>TRENDING NOW</Text>
+      </UnorderedList>
 
       <CatelogCarousel />
+
+      <Box w={"95%"} textAlign={"left"} m={"auto"}>
+        <Text fontSize={{ base: "16px", sm: "18px", md: "20px", lg: "23px" }} fontWeight={"500"} textAlign={"left"}>Great deals for holiday shopping</Text>
+        <Text fontSize={"14px"} textAlign={"left"}>Items similar to what you've browsed are on sale</Text>
+      </Box>
+
+      <ProductCarousel data={products} boolean={false} />
+
+      <UnorderedList m={"50px auto"} w={"95%"} fontSize={{ base: "12px", sm: "13px", md: "14px", lg: "14px" }}>
+        <Image src={"/Homepage/fullLine.PNG"} alt={"line"} />
+        <Text m={"30px auto 0px auto"} letterSpacing={"3px"} fontWeight={"500"} fontSize={{ base: "14px", sm: "16px", md: "18px", lg: "20px" }}>THE THREAD</Text>
+        <Text mb={"10px"}>Your go-to destination for all things fashion, beauty and lifestyle at Nordstrom, from how-tos and style inspiration to exclusive interviews and more.</Text>
+        <Link textDecor={"underline"}>Get Inspired</Link>
+      </UnorderedList>
+
+      <GiftCarousel Gifts={Gifts1} />
+
+      <Box w={"95%"} textAlign={"left"} m={"auto"}>
+        <Text fontSize={{ base: "16px", sm: "18px", md: "20px", lg: "23px" }} fontWeight={"500"} textAlign={"left"}>Holiday Ideas From Brands You Like</Text>
+      </Box>
+
+      <ProductCarousel data={products} boolean={false} />
+
+      <UnorderedList m={"50px auto"} w={"95%"}>
+        <Image src={"/Homepage/fullLine.PNG"} alt={"line"} />
+        <Text m={"30px auto"} letterSpacing={"3px"} fontWeight={"500"} fontSize={{ base: "14px", sm: "16px", md: "18px", lg: "20px" }}>SERVICES & EVENTS</Text>
+      </UnorderedList>
+
+      <Gift2Carousel Gifts={Gifts2} />
+
+      <UnorderedList m={"50px auto"} w={"95%"}>
+        <Image src={"/Homepage/fullLine.PNG"} alt={"line"} />
+        <Text m={"30px auto"} letterSpacing={"3px"} fontWeight={"500"} fontSize={{ base: "14px", sm: "16px", md: "18px", lg: "20px" }}>SHOP BY CATEGORY</Text>
+      </UnorderedList>
+
+      <Box w={"95%"} textAlign={"left"} m={"auto"}>
+        <Text fontSize={{ base: "16px", sm: "18px", md: "20px", lg: "23px" }} fontWeight={"500"} textAlign={"left"}>Trending near you</Text>
+        <Text fontSize={"14px"} textAlign={"left"}>The Most-viewed Items by Shoppers in Your Area</Text>
+      </Box>
+
+      <ProductCarousel data={products} boolean={false} />
 
       <Footer />
     </Box>

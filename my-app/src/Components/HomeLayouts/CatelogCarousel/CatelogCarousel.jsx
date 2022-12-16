@@ -42,18 +42,22 @@ const Next = (props) => {
 };
 
 
-export const CatelogCarousel = ({ data = [] }) => {
+export const CatelogCarousel = () => {
     const settings = {
         dots: false,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+        fade: true,
         infinite: true,
-        speed: 500,
+        speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
     };
 
     return (
-        <Box w={"95%"} position={"relative"} m={"30px auto"}>
+        <Box w={"95%"} m={"50px auto"}>
 
             <Slider {...settings} prevArrow={<Prev />} nextArrow={<Next />} >
 
