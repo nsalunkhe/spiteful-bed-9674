@@ -1,47 +1,27 @@
-import { Box, Checkbox, CheckboxGroup, CheckboxIcon, Heading, HStack, Img, Select, SimpleGrid, Spacer, VStack } from '@chakra-ui/react'
+import { Box, Heading, HStack, Img, SimpleGrid, Spacer, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const MapData = ({Products}) => {
-  console.log(Products)
+const MapData = ({Products,data}) => {
+  console.log(Products,data)
+  const Men  = data.length!=0? data:Products 
+
+  
+  
   return (
-    <Box>
-      <Box display="flex" >
-        <Box width="20%">
-          <Box  position="Fixed"> 
-            <Heading  paddingLeft="-50px" marginLeft="0px" size='md'>Gender</Heading>
-
-            <Box display="flex" flexDirection="column" justifyContent="flex-start">
-      
-              <Checkbox pl="6" size='md' colorScheme='green' >Mens</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Womens</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Boys</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Girls</Checkbox>
-                
-            </Box>
-            <Heading pl={-10} size='md'>Size</Heading>
-            <Box display="flex" flexDirection="column" justifyContent="flex-start">
-            
-              <Checkbox pl="6" size='md' colorScheme='green' >S</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >M</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >L</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >XL</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >XXL</Checkbox>
-
-            </Box>
-
-          </Box>
-        </Box>
-      <SimpleGrid columns={[1, 2, 3, 4]} spacing={8} width="100%">
+   
+        
+      <SimpleGrid columns={[1, 2, 3, 4]} spacing={10} width="100%" padding="0px 20px 0px 20px">
         {
-        Products.map((prod)=>{
+        Men.map((prod)=>{
             return <Box key={prod.id} style={{fontFamily:"'Noto Sans', sans-serif" ,boxShadow: " rgba(0, 0, 0, 0.16) 0px 1px 4px", paddingBottom:"10px"}}>
                 <Img src={prod.images[0]} alt="product image" />
                 <Box width="95%" margin="auto">
-                  <Box>
-                    <Heading size="sm">{prod.title}</Heading>
-                    <p><span style={{color:'black',fontWeight:'bold'}}>Color:</span> {prod.actual_color}</p>
-                    <p><span style={{color:'black',fontWeight:'bold'}}>Brand:</span> {prod.brand}</p>
-                    <p><span style={{color:'black',fontWeight:'bold'}}>Size:</span> {prod.size}</p>
+                <Heading size="sm">{prod.title}</Heading>
+                  <Box paddingLeft="10px" >
+                    
+                    <Text textAlign="left" style={{color:'grey'}}><span style={{color:'grey',fontWeight:'bold'}}>Color:</span> {prod.actual_color}</Text>
+                    <Text textAlign="left" style={{color:'grey'}}><span style={{color:'grey',fontWeight:'bold'}}>Brand:</span> {prod.brand}</Text>
+                    <Text textAlign="left" style={{color:'grey'}}><span style={{color:'grey',fontWeight:'bold'}}>Size:</span> {prod.size}</Text>
                   </Box>
                  
                   <HStack >
@@ -55,8 +35,8 @@ const MapData = ({Products}) => {
         })
         }
       </SimpleGrid>
-      </Box>
-    </Box>
+     
+  
   )
 }
 
