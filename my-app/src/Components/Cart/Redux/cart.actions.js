@@ -1,6 +1,7 @@
 // Cart Actions here
 // Cart Actions here
 import axios from "axios";
+
 import {
   GET_CART_ITEMS_LOADING,
   GET_CART_ITEMS_SUCCESS,
@@ -36,12 +37,13 @@ export const fetchProducts = async (disptach) => {
 //     .catch(() => dispatch({ type: ADD_ITEM_TO_CART_ERROR }));
 // };
 
-export const removeItem = (cartId) => (dispatch) => {
+export const removeItem = (cartId) =>async (dispatch) => {
   dispatch({ type: REMOVE_CART_ITEMS_LOADING });
   return axios
     .delete(`http://localhost:8080/Cartitems/${cartId}`)
     .then((r) => {
-      dispatch({ type: REMOVE_CART_ITEMS_SUCCESS, payload: { id: cartId } });
+      console.log(r)
+      dispatch({ type: REMOVE_CART_ITEMS_SUCCESS, payload: r });
     })
     .catch(() => dispatch({ type: REMOVE_CART_ITEMS_ERROR }));
 };

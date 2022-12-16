@@ -19,18 +19,7 @@ const initalState = {
     error: false,
     data: [],
   
-  // additem: {
-  //   loading: false,
-  //   error: false,
-  // },
-  // updateinit: {
-  //   loading: false,
-  //   error: false,
-  // },
-  // reminit: {
-  //   loading: false,
-  //   error: false,
-  // },
+
   
 };
 export const cartReducer = (state = initalState, { type, payload }) => {
