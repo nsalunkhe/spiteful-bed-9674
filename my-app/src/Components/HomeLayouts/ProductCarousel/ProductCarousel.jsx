@@ -11,7 +11,7 @@ const Prev = (props) => {
     return (
         <>
             <Box zIndex={"10"} position={"absolute"} top={"45%"} left={"0px"} onClick={onClick}>
-                <GrPrevious fontSize={"20px"}  color={"#3f4246"} />
+                <GrPrevious fontSize={"20px"} color={"#3f4246"} />
             </Box>
         </>
     );
@@ -23,14 +23,14 @@ const Next = (props) => {
     return (
         <>
             <Box zIndex={"10"} position={"absolute"} top={"45%"} right={"0px"} onClick={onClick}>
-                <GrNext fontSize={"20px"}  color={"#3f4246"} />
+                <GrNext fontSize={"20px"} color={"#3f4246"} />
             </Box>
         </>
     );
 };
 
 
-export const ProductCarousel = ({ data = [] }) => {
+export const ProductCarousel = ({ data = [], boolean }) => {
     const settings = {
         dots: false,
         infinite: false,
@@ -78,14 +78,16 @@ export const ProductCarousel = ({ data = [] }) => {
     };
 
     return (
-        <Box w={"95%"} position={"relative"} m={"30px auto"}>
+        <Box w={"95%"} m={"auto auto 50px auto"}>
 
             <Slider {...settings} prevArrow={<Prev />} nextArrow={<Next />} >
 
-                <Stack justify={"space-between"} w={"220px"} h={"380px"} p={"10px"} m={"auto"} boxSizing={"border-box"}>
-                    <Image src={"/Homepage/img12.webp"} h={"80%"} alt="demo" m={"auto"} />
-                    <Button m={"0"} w={"186px"} colorScheme={"pink"}>Shop Now</Button>
-                </Stack>
+                {
+                    boolean && <Stack justify={"space-between"} w={"220px"} h={"380px"} p={"10px"} m={"auto"} boxSizing={"border-box"}>
+                        <Image src={"/Homepage/img12.webp"} h={"80%"} alt="demo" m={"auto"} />
+                        <Button m={"0"} w={"186px"} colorScheme={"pink"}>Shop Now</Button>
+                    </Stack>
+                }
 
 
                 {
