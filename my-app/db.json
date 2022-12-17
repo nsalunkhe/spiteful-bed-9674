@@ -5475,6 +5475,29 @@
   ],
   "Cartitems": [
     {
+      "id": 6937673,
+      "title": "IMARA Women Black Solid Top",
+      "brand": "IMARA",
+      "size": "XL",
+      "product_type": "Top",
+      "variant_price": 959,
+      "variant_mrp": 1599,
+      "dominant_material": "Polyester",
+      "care_instructions": "Polyester | Dry-clean",
+      "actual_color": "Black",
+      "dominant_color": "Black",
+      "images": [
+        "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/88c6ad02-eab9-42c8-8b8e-cbcd8f015d361535627393491-IMARA-Women-Black-Solid-Top-7471535627393374-1.jpg",
+        "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/06f7fe3a-08c5-4718-9d5b-d2e82f7806a71535627393473-IMARA-Women-Black-Solid-Top-7471535627393374-2.jpg",
+        "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/9f9ad6fe-3260-4bf8-9088-59dd7351a0f41535627393453-IMARA-Women-Black-Solid-Top-7471535627393374-3.jpg",
+        "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/8e268984-4d24-4563-b3ee-c2ff0f2c600c1535627393440-IMARA-Women-Black-Solid-Top-7471535627393374-4.jpg",
+        "http://assets.myntassets.com/v1/assets/images/6937673/2018/8/30/bf975857-fee6-4685-9630-ca7cd4f13d631535629577797-IMARA-Women-Black-Solid-Top-81535629577403-5.jpg"
+      ],
+      "type": "Clothing/Women/Tops/IMARA/More by IMARA",
+      "ideal_for": "Women",
+      "is_in_stock": "Out of Stock"
+    },
+    {
       "id": 7441182,
       "title": "House of Pataudi Men Black Printed Straight Kurta",
       "brand": "House of Pataudi",
@@ -5495,8 +5518,7 @@
       ],
       "type": "Clothing/Men/Kurtas/House of Pataudi/More by House of Pataudi",
       "ideal_for": "Men",
-      "is_in_stock": "In Stock",
-      "qty":1
+      "is_in_stock": "In Stock
     },
     {
       "id": 1314889,
@@ -5517,8 +5539,7 @@
       ],
       "type": "Clothing/Women/Dupatta/Dupatta Bazaar/More by Dupatta Bazaar",
       "ideal_for": "Women",
-      "is_in_stock": "In Stock",
-      "qty":1
+      "is_in_stock": "In Stock"
     }
   ]
 }

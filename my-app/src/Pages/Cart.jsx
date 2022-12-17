@@ -8,11 +8,11 @@ import Navbar from "../Components/Navbar/Navbar"
 import MapCartData from '../Components/Cart/mapCartData'
 
 
+import MapCartData from '../Components/Cart/mapCartData'
+import { width } from '@mui/system'
 
 
 const Cart = () => {
-
-
 
 
   const cartProducts = useSelector((store)=>(store.cartManager.data))
@@ -36,7 +36,25 @@ const Cart = () => {
 },0)
  
   return (
+   <Box>
+    <Grid style={{padding:"5%", width:"100%"}}>
+        <Box width="80%" >
+           <Flex marginBottom="30px">
+           <Button  >Shoping Bag</Button>
+          <Button  >Save for Later</Button>
+            </Flex> 
+         
+          {/* <Text fontSize='2xl' >Your bag is empty</Text>
+          <Text>Sign in to see what you may have saved before, or start shopping now!</Text>    */}
 
+           <Box  width="60%">
+              <MapCartData Products={cartProducts}/>
+        
+            </Box> 
+
+         
+       
+        </Box>  
   <Box>
     <Navbar/>
     <Grid style={{padding:"5%", width:"100%"}}>
@@ -69,14 +87,22 @@ const Cart = () => {
          ₹ {total}
         </Heading>
 
-       
-         
-        </Flex>
+      
        
       </Flex>
      
       <Button  size="lg"><NavLink to="/Checkout">Checkout</NavLink></Button>
 
+
+    </Grid>
+
+     
+
+      
+
+        
+
+    </Box>
   </Box>
   )
 }
