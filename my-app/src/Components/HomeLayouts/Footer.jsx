@@ -20,7 +20,7 @@ const ListHeader = ({ children }) => {
 export const Footer = () => {
     return (
         <>
-            <UnorderedList w={"100%"} bg={"#f9f9f9"} display={{ base: "none", sm: "block", md: "block", lg: "block" }} color={useColorModeValue('gray.700', 'gray.200')} boxSizing={"border-box"} m={"0"} p={"0"}>
+            <UnorderedList w={"100%"} bg={"#f9f9f9"} display={{ base: "none", sm: "block", md: "block", lg: "block" }} color={useColorModeValue('gray.700', 'gray.200')} boxSizing={"border-box"} m={"150px 0 0 0"} p={"0"}>
 
                 <SimpleGrid columns={{ base: "none", sm: 3, md: 3, lg: 6 }} fontSize={{ base: "13px", md: "14px", lg: "15px" }} w={"95%"} m={"auto"} boxSizing={"border-box"} gap={"20px"} p={"20px 0px"}>
 
