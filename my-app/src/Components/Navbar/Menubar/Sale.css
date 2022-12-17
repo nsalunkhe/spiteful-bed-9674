@@ -1,0 +1,147 @@
+.sale_menu,
+.clothing_menu,
+.shoes_menu {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50fr 25fr 25fr;
+}
+.shoes_menu {
+  grid-template-columns: 25fr 25fr 50fr;
+}
+.dresses_menu {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(4, 1fr);
+}
+.sale_menu > div,
+.clothing_menu > div,
+.dresses_menu > div,
+.shoes_menu > div {
+  /* border: 1px solid black; */
+  border-left: 1px solid lightgray;
+  padding-left: 15px;
+}
+.shoes_menu > div:nth-child(3) {
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menubar .sale_menu ul li,
+.menubar .clothing_menu ul li,
+.menubar .dresses_menu ul li,
+.shoes .dresses_menu ul li {
+  text-decoration: none;
+  list-style: none;
+  line-height: 2;
+}
+.menubar .sale_menu ul li a,
+.menubar .clothing_menu ul li a,
+.clothing_menu .submenu4 a,
+.dresses_menu .submenu2 a,
+.dresses_menu .submenu4 a,
+.shoes_menu .submenu4 a,
+.shoes_menu .submenu2 a {
+  font-weight: 400;
+}
+.menubar .sale_menu ul li a:hover,
+.menubar .clothing_menu ul li a:hover,
+.menubar .dresses_menu ul li a:hover,
+.menubar .shoes_menu ul li a:hover {
+  font-weight: 600;
+}
+.menubar .shoes_menu .submenu2 ul {
+  display: flex;
+  flex-direction: column;
+  line-height: 2;
+}
+.menubar .sale_menu ul li:hover,
+.menubar .clothing_menu ul li:hover,
+.menubar .dresses_menu ul li:hover,
+.menubar .shoes_menu ul li:hover {
+  color: #ff385c;
+  cursor: pointer;
+}
+.sale_menu .menubar-images,
+.clothing_menu .menubar-images,
+.dresses_menu .menubar-images {
+  width: 60%;
+  border-radius: 50%;
+  align-self: center;
+}
+.sale_menu .submenu1,
+.clothing_menu .submenu1 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+}
+.sale_menu .submenu3,
+.clothing_menu .submenu2,
+.dresses_menu .submenu3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 10px;
+}
+.sale_menu .submenu3 > div,
+.clothing_menu .submenu2 > div,
+.dresses_menu .submenu3 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.sale_menu .submenu3 .menubar-images,
+.clothing_menu .submenu2 .menubar-images,
+.dresses_menu .submenu3 .menubar-images {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  /* border: 1px solid rgb(175, 173, 173); */
+}
+.sale_menu .submenu3 > div img,
+.dresses_menu .submenu3 > div img,
+.clothing_menu .submenu2 > div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.clothing_menu .submenu4,
+.dresses_menu .submenu4,
+.shoes_menu .submenu4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.clothing_menu .submenu4 > div,
+.dresses_menu .submenu4 > div,
+.shoes_menu .submenu4 > div {
+  display: grid;
+  grid-template-columns: 30fr 70fr;
+  align-items: center;
+}
+
+.clothing_menu .submenu4 > div .img-container,
+.dresses_menu .submenu4 > div .img-container,
+.shoes_menu .submenu4 > div .img-container {
+  width: 40px;
+  height: 40px;
+  height: min-content;
+  border-radius: 50%;
+  align-self: center;
+  /* border: 1px solid black; */
+}
+.clothing_menu .submenu4 > div .img-container + div,
+.dresses_menu .submenu4 > div .img-container + div,
+.shoes_menu .submenu4 > div .img-container + div {
+  border-bottom: 1px solid lightgray;
+}
+.clothing_menu .submenu4 > div img,
+.dresses_menu .submenu4 > div img,
+.shoes_menu .submenu4 > div img {
+  height: min-content;
+  border-radius: 50%;
+}

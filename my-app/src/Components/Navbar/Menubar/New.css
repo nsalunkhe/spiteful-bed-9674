@@ -1,0 +1,72 @@
+.new_menu {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 25fr 25fr 50fr;
+}
+
+.new_menu > div:nth-child(2),
+.new_menu > div:nth-child(3) {
+  padding-left: 15px;
+  border-left: 1px solid lightgray;
+}
+.menubar .new_menu ul li {
+  text-decoration: none;
+  list-style: none;
+  line-height: 2;
+}
+.menubar .new_menu ul li a {
+  font-weight: 400;
+}
+.menubar .new_menu ul li a:hover {
+  font-weight: 600;
+}
+.menubar .new_menu ul li:hover {
+  color: #ff385c;
+  cursor: pointer;
+}
+.new_menu .submenu2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 10px;
+}
+.new_menu .submenu2 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.new_menu .submenu2 .menubar-images {
+  align-self: center;
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+}
+.new_menu .submenu2 > div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.new_menu .submenu3,
+.shoes_menu .submenu3 {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.new_menu .submenu3 a,
+.shoes_menu .submenu3 a {
+  width: 50%;
+  border: 1px solid transparent;
+}
+.new_menu .submenu3 a:hover,
+.shoes_menu .submenu3 a:hover {
+  border: 1px solid rgb(91, 91, 236);
+}
+.new_menu .submenu3 a img,
+.shoes_menu .submenu3 a img {
+  width: 100%;
+}
