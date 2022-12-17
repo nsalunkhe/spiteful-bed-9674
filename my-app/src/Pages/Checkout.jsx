@@ -25,10 +25,16 @@ import {
   AlertDescription,
   AlertTitle
 } from '@chakra-ui/react';
-
+import { NavLink } from "react-router-dom";
 import { useToast } from '@chakra-ui/react';
+import {useSelector} from "react-redux"
+
+
+
+
 
 const Form1 = () => {
+ 
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
@@ -243,6 +249,35 @@ const Form2 = () => {
         </FormLabel>
         <Input
         textAlign="center"
+          placeholder="1234 5678 7867"
+          type="number"
+          name="city"
+          id="city"
+          autoComplete="city"
+          focusBorderColor="brand.400"
+          shadow="sm"
+          size="sm"
+          w="50%"
+          rounded="md"
+        />
+      </FormControl>
+      <FormControl as={GridItem} colSpan={[6, 6, null, 2]}>
+        <FormLabel
+          htmlFor="city"
+          placeholder="Amount"
+          fontSize="sm"
+          fontWeight="md"
+          color="gray.700"
+          textAlign="center"
+          _dark={{
+            color: 'gray.50',
+          }}
+          mt="2%">
+          Amount
+        </FormLabel>
+        <Input
+        textAlign="center"
+        placeholder=" Amount in Rs"
           type="number"
           name="city"
           id="city"
@@ -393,7 +428,36 @@ const Form3 = () => {
   );
 };
 
+
+const Form4 = () => {
+ 
+
+  return (
+    
+    <>
+      <Heading w="100%" textAlign={'center'} fontWeight="normal">
+        Payment Recipt
+      </Heading>
+    
+      <Box style={{width:"70%",height:"300px",border:"1px solid red",margin:"auto",marginTop:"20px",padding:"10px"}}>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Product Name : </p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Brand Name :</p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Size :</p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>color :</p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Quantity :</p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Payment Status : Success</p>
+        <p style={{textAlign:"left",marginBottom:"10px"}}>Total Discount Earn :</p>
+        <p style={{textAlign:"left"}}>Amount Paid :</p>  
+      </Box>
+      <Button style={{marginTop:"20px",color:"white",backgroundColor:"teal"}}><NavLink to="/">HOME</NavLink></Button>
+       
+    </>
+  );
+};
+
+
 export default function Checkout() {
+
   const toast = useToast();
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
@@ -413,7 +477,7 @@ export default function Checkout() {
           mb="5%"
           mx="5%"
           isAnimated></Progress>
-        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> :step===3?<Form3 />:<Form4/>}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
@@ -431,7 +495,7 @@ export default function Checkout() {
               </Button>
               <Button
                 w="7rem"
-                isDisabled={step === 3}
+                isDisabled={step === 4}
                 onClick={() => {
                   setStep(step + 1);
                   if (step === 3) {
@@ -454,9 +518,9 @@ export default function Checkout() {
                 onClick={() => {
                   toast({
                     title: 'Payment Successfull.',
-                    description: "Thank You for Purchasing Our Product.",
+                    description: "Thank You for Purchasing Our Product. Click on next to see recipt of your payment",
                     status: 'success',
-                    duration: 10000,
+                    duration: 2000,
                     isClosable: true,
                   });
                 }}>
