@@ -1,37 +1,68 @@
-import { Box, Heading, HStack, Img, SimpleGrid, Spacer,Button } from '@chakra-ui/react'
-import React from 'react'
+import {Select, Box, Heading, HStack, Img, SimpleGrid, Spacer,Button,Flex, Text } from '@chakra-ui/react'
+import React, { useEffect, useState,useReducer } from 'react'
+import Quantity from './quantity'
 
-const MapCartData = ({Products}) => {
-  console.log(Products)
+
+
+
+const MapCartData = ({Products,handleRemove}) => {
+ 
+
+
+  
+
+
   return (
-    <SimpleGrid columns={[1, 2, 3, 4]} spacing={8}>
-    <Box>{
+   
+    <Box width="100%">{
      
        Products.map((prod)=>{
-            return <Box key={prod.id}>
-                <Img src={prod.images[0]} alt="product image" />
-                <Box width="95%" margin="auto"  >
-                  <Heading size="sm">{prod.title}</Heading>
-                  <p><span style={{color:'black',fontWeight:'bold'}}>Color:</span> {prod.actual_color}</p>
-                  <p><span style={{color:'black',fontWeight:'bold'}}>Brand:</span> {prod.brand}</p>
-                  <p><span style={{color:'black',fontWeight:'bold'}}>Size:</span> {prod.size}</p>
-                  <HStack >
-                    <p style={{ border:"2px solid black" ,padding:"5px 7px 5px 7px" ,}}><span style={{color:'black',fontWeight:'bold'}}>MRP:</span> ₹{prod.variant_mrp}</p>
-                    <Spacer/>
-                    <p style={{backgroundColor:'green', border:"1px solid black" ,padding:"5px 7px 5px 7px" ,color:'white'}}><span style={{fontWeight:'bold'}}>Offer Price:</span> ₹{prod.variant_price}</p>
-                  </HStack>
-                  <Button>Remove</Button>
-                
-                </Box>
+            return <Flex width="100%" gap="10px"  alignItems="center"  padding="5px" marginTop="10px" key={prod.id}>
+                        <Img height="200px" width="150px" src={prod.images[0]} alt="product image" />
                
-            </Box>
-        })
+                 
+                        <Box  width="30%">
+                          <Text marginBottom="8px" textAlign="left"  fontSize="sm" fontWeight="bold">{prod.title}</Text>
+                          <Text textAlign="left" fontSize="sm"><span >Color:</span> {prod.actual_color}</Text>
+                          <Text textAlign="left" fontSize="sm"><span >Brand:</span> {prod.brand}</Text>
+                          <Text textAlign="left" fontSize="sm"><span>Size:</span> {prod.size}</Text>
+                          <HStack marginTop="7px">
+                            <Text textAlign="left" color="red" textDecoration="line-through"><span >MRP:</span> ₹{prod.variant_mrp}</Text>
+                            <Spacer/>
+                            <Text textAlign="left" color="green"><span >Offer Price:</span> ₹{prod.variant_price}</Text>
+                          </HStack>
+                        </Box>
 
+                        <Flex  gap="30px">
+                              <Box>
+                               <Quantity quantity={prod.qty} id={prod.id}/>
+                           
+                              </Box>
+                              <Button padding="10px 15px" size="sm" onClick={()=>handleRemove(prod.id)}>Remove</Button>
 
-        }
+                              {/* <Box  textAlign="left">
+                                <label htmlFor="" style={{fontWeight:"bold"}}> 
+                                <input type="radio" /> Shiping
+                                </label>
+                                <p style={{textAlign:"justify"}}>International orders usually arrive within 5–13 business days. We'll give you shipping dates in checkout.</p>
+                          
+                              </Box> */}
+                        </Flex>
+
+                 
+                 
+                  
+                
+                
+                
+               
+                    </Flex>
+                  })}
+
+       
       
     </Box>
-    </SimpleGrid>
+   
   )
 }
 
