@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchProducts,removeItem } from '../Components/Cart/Redux/cart.actions'
 import { NavLink } from 'react-router-dom'
-
+import Navbar from "../Components/Navbar/Navbar"
 import MapCartData from '../Components/Cart/mapCartData'
+
 
 
 
@@ -37,6 +38,7 @@ const Cart = () => {
   return (
 
   <Box>
+    <Navbar/>
     <Grid style={{padding:"5%", width:"100%"}}>
         <Flex gap="50px" width="80%" >
           {/* <Text fontSize='2xl' >Your bag is empty</Text>
