@@ -3,13 +3,13 @@ import { Grid,Box,Button,Heading, GridItem,Flex ,Text} from '@chakra-ui/react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { fetchProducts,removeItem } from '../Components/Cart/Redux/cart.actions'
+
 import { NavLink } from 'react-router-dom'
 import Navbar from "../Components/Navbar/Navbar"
 import MapCartData from '../Components/Cart/mapCartData'
 
 
-import MapCartData from '../Components/Cart/mapCartData'
-import { width } from '@mui/system'
+
 
 
 const Cart = () => {

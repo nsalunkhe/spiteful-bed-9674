@@ -1,10 +1,17 @@
 import { Box, Heading, HStack, Img, SimpleGrid, Spacer, Text } from '@chakra-ui/react'
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import SingleProduct from '../../Pages/SingleProduct'
 
 const MapData = ({Products,data}) => {
   console.log(Products,data)
   const Men  = data.length!=0? data:Products 
 
+  const navigate = useNavigate()
+
+  const singleProductData =(prod)=>{
+    navigate({pathname:'/SingleProduct'},{state:prod})
+  }
   
   
   return (
@@ -13,7 +20,7 @@ const MapData = ({Products,data}) => {
       <SimpleGrid columns={[1, 2, 3, 4]} spacing={10} width="100%" padding="0px 20px 0px 20px">
         {
         Men.map((prod)=>{
-            return <Box key={prod.id} style={{fontFamily:"'Noto Sans', sans-serif" ,boxShadow: " rgba(0, 0, 0, 0.16) 0px 1px 4px", paddingBottom:"10px"}}>
+            return(<Box onClick={()=>{singleProductData(prod)}} key={prod.id} style={{fontFamily:"'Noto Sans', sans-serif" ,boxShadow: " rgba(0, 0, 0, 0.16) 0px 1px 4px", paddingBottom:"10px"}}>
                 <Img src={prod.images[0]} alt="product image" />
                 <Box width="95%" margin="auto">
                 <Heading size="sm">{prod.title}</Heading>
@@ -32,7 +39,8 @@ const MapData = ({Products,data}) => {
                 </Box>
 
             </Box>
-        })
+           
+        )})
         }
       </SimpleGrid>
      
