@@ -25,10 +25,16 @@ import {
   AlertDescription,
   AlertTitle
 } from '@chakra-ui/react';
-
+import { NavLink, useNavigate } from "react-router-dom";
 import { useToast } from '@chakra-ui/react';
+import {useSelector} from "react-redux"
+
+
+
+
 
 const Form1 = () => {
+ 
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
@@ -243,6 +249,7 @@ const Form2 = () => {
         </FormLabel>
         <Input
         textAlign="center"
+          placeholder="1234 5678 7867"
           type="number"
           name="city"
           id="city"
@@ -250,7 +257,35 @@ const Form2 = () => {
           focusBorderColor="brand.400"
           shadow="sm"
           size="sm"
-          w="50%"
+          w="full"
+          rounded="md"
+        />
+      </FormControl>
+      <FormControl as={GridItem} colSpan={[6, 6, null, 2]}>
+        <FormLabel
+          htmlFor="city"
+          placeholder="Amount"
+          fontSize="sm"
+          fontWeight="md"
+          color="gray.700"
+          textAlign="center"
+          _dark={{
+            color: 'gray.50',
+          }}
+          mt="2%">
+          Amount
+        </FormLabel>
+        <Input
+        textAlign="center"
+        placeholder=" Amount in Rs"
+          type="number"
+          name="city"
+          id="city"
+          autoComplete="city"
+          focusBorderColor="brand.400"
+          shadow="sm"
+          size="sm"
+          w="full"
           rounded="md"
         />
       </FormControl>
@@ -275,7 +310,7 @@ const Form2 = () => {
           focusBorderColor="brand.400"
           shadow="sm"
           size="sm"
-          w="50%"
+          w="full"
           rounded="md"
         />
       </FormControl>
@@ -301,7 +336,7 @@ const Form2 = () => {
           focusBorderColor="brand.400"
           shadow="sm"
           size="sm"
-          w="50%"
+          w="full"
           rounded="md"
         />
       </FormControl>
@@ -393,7 +428,27 @@ const Form3 = () => {
   );
 };
 
+
+const Form4 = () => {
+ 
+
+  return (
+    
+    <>
+      <Heading w="100%" textAlign={'center'} fontWeight="normal">
+        Payment Recipt
+      </Heading>
+    
+      
+      <Button style={{marginTop:"20px",color:"white",backgroundColor:"teal"}}><NavLink to="/">HOME</NavLink></Button>
+       
+    </>
+  );
+};
+
+
 export default function Checkout() {
+  const navigate=useNavigate()
   const toast = useToast();
   const [step, setStep] = useState(1);
   const [progress, setProgress] = useState(33.33);
@@ -413,7 +468,7 @@ export default function Checkout() {
           mb="5%"
           mx="5%"
           isAnimated></Progress>
-        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> : <Form3 />}
+        {step === 1 ? <Form1 /> : step === 2 ? <Form2 /> :<Form3 />}
         <ButtonGroup mt="5%" w="100%">
           <Flex w="100%" justifyContent="space-between">
             <Flex>
@@ -454,11 +509,20 @@ export default function Checkout() {
                 onClick={() => {
                   toast({
                     title: 'Payment Successfull.',
-                    description: "Thank You for Purchasing Our Product.",
+                    description: "Thank You for Purchasing Our Product",
                     status: 'success',
-                    duration: 10000,
+                    duration: 2000,
                     isClosable: true,
+                    position:"top"
                   });
+
+                  setTimeout(()=>{
+                      return (
+                        navigate("/")
+                      )
+                    
+                      
+                  },3000)
                 }}>
                 Submit
               </Button>
