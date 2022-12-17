@@ -16,8 +16,8 @@ export const Gift2 = ({ image, title, description, links }) => {
                         <Text w={"98%"} textAlign={"left"}>{description}</Text>
                         <Box w={"98%"} mt={"10px"}>
                             {
-                                links?.map((link) => (
-                                    <Link textDecor={"underline"} m={"10px 10px 10px 0px"}>{link}</Link>
+                                links?.map((link, i) => (
+                                    <Link key={i} textDecor={"underline"} m={"10px 10px 10px 0px"}>{link}</Link>
                                 ))
                             }
                         </Box>

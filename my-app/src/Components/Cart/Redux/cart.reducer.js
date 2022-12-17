@@ -11,6 +11,8 @@ import {
   REMOVE_CART_ITEMS_LOADING,
   REMOVE_CART_ITEMS_SUCCESS,
   REMOVE_CART_ITEMS_ERROR,
+  Increment,
+  Decrement
 } from "./cart.types";
 
 const initalState = {
@@ -33,7 +35,27 @@ export const cartReducer = (state = initalState, { type, payload }) => {
     }
     case GET_CART_ITEMS_ERROR: {
       return { ...state,loading: false, error: true,  };
+    
+     
     }
+    case Increment:{
+     
+        return{
+          ...state,
+          data: state.data.map((item) => item.id === payload ? { ...item, qty: item.qty + 1 } : item)
+        }
+     
+     
+      
+    }
+
+    case Decrement:{
+      return{
+        ...state,
+        data: state.data.map((item) => item.id === payload ? { ...item, qty: item.qty - 1 } : item)
+      }
+    }
+
    
     // case ADD_ITEM_TO_CART_LOADING: {
     //   return { ...state, additem: { loading: true, error: false } };
