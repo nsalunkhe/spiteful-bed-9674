@@ -42,8 +42,14 @@ const Products = () => {
     <Box marginTop="30px">
       
       <Box display="flex">
+        <Box>
         <FilterProductsButtons filtMen={filtMen} filtWomen={filtWomen} sizeS={sizeS} sizeM={sizeM} colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} setData={setData}/>
+
+        </Box>
+        <Box>
         <MapData Products={Products} data={data} />
+
+        </Box>
       </Box>
 
 
