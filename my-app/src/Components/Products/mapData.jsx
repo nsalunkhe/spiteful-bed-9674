@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Image, Img, SimpleGrid, Spacer, Stack, Text } from '@chakra-ui/react'
+import { Box, Grid, Heading, HStack, Image, Img, SimpleGrid, Spacer, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import SingleProduct from '../../Pages/SingleProduct'
@@ -17,11 +17,11 @@ const MapData = ({ Products, data }) => {
   return (
 
 
-    <SimpleGrid columns={[1, 2, 3, 4]} spacing={10} width="100%"   padding="0px 20px 0px 20px">
+    <SimpleGrid columns={[1, 2, 3, 4]} width="100%" >
       {
         Men.map((prod) => {
           return (
-            <Box w={"280px"} m={"auto"} onClick={() => { singleProductData(prod) }} key={prod.id} style={{ fontFamily: "'Noto Sans', sans-serif", boxShadow: " rgba(0, 0, 0, 0.16) 0px 1px 4px", paddingBottom: "10px" }}>
+            <Box  m={"10px"} onClick={() => { singleProductData(prod) }} key={prod.id} style={{ fontFamily: "'Noto Sans', sans-serif", boxShadow: " rgba(0, 0, 0, 0.16) 0px 1px 4px", paddingBottom: "10px" }}>
 
               <Stack justify={"space-between"} w={"100%"} h={"100%"} fontSize={"13px"} >
 

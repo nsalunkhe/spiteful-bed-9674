@@ -2,8 +2,9 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { GrNext, GrPrevious } from 'react-icons/gr';
-import { Box, Button, Center, HStack, Image, Link, Spacer, Stack, VStack } from '@chakra-ui/react';
+import { Box, Button, Center, HStack, Image, Spacer, Stack, VStack } from '@chakra-ui/react';
 import { Products } from './Products';
+import { Link } from 'react-router-dom';
 
 const Prev = (props) => {
     // console.log(props);
@@ -31,6 +32,8 @@ const Next = (props) => {
 
 
 export const ProductCarousel = ({ data = [], boolean }) => {
+    data = data?.filter((e, i) => i<21)
+    // console.log(data.length)
     const settings = {
         dots: false,
         infinite: false,
@@ -100,7 +103,7 @@ export const ProductCarousel = ({ data = [], boolean }) => {
 
                 <Box w={"220px"} h={"380px"} p={"10px"} m={"auto"} >
                     <Box w={"100%"} h={"100%"} display={"flex"} justifyContent={"center"} alignItems={"center"} border={"1px solid #edf2f7"}>
-                        <Button colorScheme={"gray"}>Show More</Button>
+                        <Link to={"/Products"}><Button colorScheme={"gray"}>Show More</Button></Link>
                     </Box>
                 </Box>
 

@@ -5,7 +5,7 @@ const ProductImage = ({img}) => {
   return (
     <Box>
       
-        <Image width="80%%" src={img}/>
+        <Image width="80%" src={img}/>
     </Box>
   )
 }

@@ -1,4 +1,4 @@
-import { Box, Button, Heading, HStack, Image, Show, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Grid, Heading, HStack, Image, Show, SimpleGrid, Stack, Text, VStack } from '@chakra-ui/react'
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
@@ -22,21 +22,22 @@ const SingleProduct = () => {
             <Box>
 
                 <Show above='md'>
-                    <HStack>
+                    <Grid templateColumns={"repeat(2, 50% 50%)"}>
                         <HStack spacing={"0px"} border="1px solid red">
                             <Box>
 
                                 <ProductImage img={img} />
                             </Box>
 
-                            <VStack border="1px solid green" >
-                                <Image border="1px solid purple" onClick={() => setImg(location.state.images[1])} width="23%" src={location.state.images[1]} />
-                                <Image onClick={() => setImg(location.state.images[2])} width="23%" src={location.state.images[2]} />
-                                <Image onClick={() => setImg(location.state.images[3])} width="23%" src={location.state.images[3]} />
-                                <Image onClick={() => setImg(location.state.images[4])} width="23%" src={location.state.images[4]} />
-                            </VStack>
+                            <Stack border="1px solid green" w={"24%"}>
+                                <Image border="1px solid purple" onClick={() => setImg(location.state.images[1])} width="100%" src={location.state.images[1]} />
+                                <Image onClick={() => setImg(location.state.images[2])} width="100%" src={location.state.images[2]} />
+                                <Image onClick={() => setImg(location.state.images[3])} width="100%" src={location.state.images[3]} />
+                                <Image onClick={() => setImg(location.state.images[4])} width="100%" src={location.state.images[4]} />
+                            </Stack>
 
                         </HStack>
+
                         <Box border="1px solid red" w={"90%"} h={"380px"} p={"10px"} m={"auto"}>
 
                             <Stack justify={"space-between"} w={"100%"} fontSize={"16px"} >
@@ -63,7 +64,7 @@ const SingleProduct = () => {
                             </Stack>
 
                         </Box>
-                    </HStack>
+                    </Grid>
                 </Show>
 
                 {/* ---------------------------------------Mobile-------------------------------------- ----------*/}

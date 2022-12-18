@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Checkbox, Heading, Show } from '@chakra-ui/react'
+import { Box, Checkbox, Heading, Show, Stack, UnorderedList } from '@chakra-ui/react'
 
-const FilterProductsButtons = ({ filtMen, filtWomen, sizeS, sizeM, colorBlue, colorRed, colorPink, setData }) => {
+const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colorBlue, colorRed, colorPink, setData }) => {
 
   const filterMen = (e) => {
     if (e.target.checked) {
@@ -64,56 +64,51 @@ const FilterProductsButtons = ({ filtMen, filtWomen, sizeS, sizeM, colorBlue, co
 
 
   return (
- 
-     
-        <Box width="15%"   >
-          {/* backgroundColor="#f1f2f4" */}
-          <Box position="Fixed" width="13%" backgroundColor="#f1f2f4" border="1px solid black"> <hr />
-            <Heading textAlign="left" pl={2} size='md'>Gender</Heading>
 
-            <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
+      <Stack w={"100%"} onClick={onClose}>
+        
+        <Heading textAlign="left" pl={2} size='md'>Gender</Heading>
 
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={filterMen} >Mens</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={filterWomen}>Womens</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Boys</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Girls</Checkbox>
+        <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
 
-            </Box><br /><hr />
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={filterMen} >Mens</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={filterWomen}>Womens</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >Boys</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >Girls</Checkbox>
 
-            <Heading textAlign="left" pl={2} size='md' marginTop="5px">Size</Heading>
-            <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
+        </Box><br /><hr />
 
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={filtersizeS} >S</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={filtersizeM} >M</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >L</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >XL</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >XXL</Checkbox>
+        <Heading textAlign="left" pl={2} size='md' marginTop="5px">Size</Heading>
+        <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
 
-            </Box><br />
-            <hr />
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={filtersizeS} >S</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={filtersizeM} >M</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >L</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >XL</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >XXL</Checkbox>
 
-            <Heading textAlign="left" pl={2} size='md' marginTop="5px">Colors</Heading>
-            <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
+        </Box><br />
+        <hr />
 
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={colorB} >Blue</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={colorR} >Red</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' onChange={colorP} >Pink</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Black</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >Green</Checkbox>
-              <Checkbox pl="6" size='md' colorScheme='green' >yellow</Checkbox>
+        <Heading textAlign="left" pl={2} size='md' marginTop="5px">Colors</Heading>
+        <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
+
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={colorB} >Blue</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={colorR} >Red</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' onChange={colorP} >Pink</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >Black</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >Green</Checkbox>
+          <Checkbox pl="6" size='md' colorScheme='green' >yellow</Checkbox>
 
 
-            </Box><br />
-            <hr />
+        </Box><br />
+
+      </Stack>
 
 
-          </Box>
-        </Box>
-      
-      
 
 
-   
+
   )
 }
 
