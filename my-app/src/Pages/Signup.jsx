@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { useContext } from "react";
-
 import "./authentication.css";
 import { Heading, Center } from "@chakra-ui/react";
 import axios from "axios";
 import { useToast } from "@chakra-ui/react";
-import { signUp } from "../redux/auth/auth.actions";
-import { useDispatch } from "react-redux";
+import { AuthContext } from "../Context/AuthContext/AuthContextProvider";
+
 const SignUp = () => {
   const initialUser = {
     email: "",
@@ -17,14 +16,14 @@ const SignUp = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const toast = useToast();
-  const dispatch = useDispatch();
-  // console.log("Authentication is ", Authentication);
-
-  const handleSubmit = (e) => {
+  clearInterval(+localStorage.getItem("setIntervalID"));
+  const Authentication = useContext(AuthContext);
+  const { signUp, logIn } = Authentication;
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      dispatch(signUp(user.email, user.password));
+      await signUp(user.email, user.password);
       toast({
         title: "Registration Successful",
         status: "success",
@@ -48,7 +47,7 @@ const SignUp = () => {
   }, [error]);
   return (
     <div className="signup-main-container">
-      <div>
+      <div className="auth-image-container">
         <img src="https://i.pinimg.com/originals/1a/3b/df/1a3bdfe1863bb6bcc6982ed2308c2cb4.jpg" />
       </div>
 
@@ -57,7 +56,7 @@ const SignUp = () => {
           <Heading marginTop={15}>Signup</Heading>
         </Center>
         <div>
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type={"email"}
               required
@@ -66,9 +65,11 @@ const SignUp = () => {
             />
             <input
               type={"password"}
+              required
               placeholder="Enter Password"
               onChange={(e) => setUser({ ...user, password: e.target.value })}
             />
+
             <input type={"submit"} id="submit" />
           </form>
           <div>
@@ -83,3 +84,10 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+// toast({
+//   title: error,
+//   status: "error",
+//   isClosable: true,
+//   position: "top",
+// });

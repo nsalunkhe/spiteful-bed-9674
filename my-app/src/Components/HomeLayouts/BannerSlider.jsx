@@ -4,8 +4,6 @@ import { MultiItemCarousel } from "./MultiItemCarousel";
 
 const banner1 = "/Homepage/img1.PNG";
 const banner2 = "/Homepage/img2.webp";
-const banner3 = "/Homepage/img6.png";
-const banner4 = "/Homepage/img7.png";
 
 export default function BannerSlider() {
     return (

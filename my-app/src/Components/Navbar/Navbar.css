@@ -179,6 +179,7 @@ a {
 }
 .login-user {
   position: relative;
+  text-transform: capitalize;
 }
 .login-user .admin-text {
   position: absolute;
@@ -315,5 +316,12 @@ a {
   .sidebar #mob-user-menu > .login-menu,
   .sidebar ul li {
     font-size: 18px;
+  }
+  #mob-user-menu .login-user {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+  #mob-user-menu .admin-text {
+    font-size: 12px;
   }
 }

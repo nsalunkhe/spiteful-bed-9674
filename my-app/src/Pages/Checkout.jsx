@@ -28,6 +28,7 @@ import {
 import { NavLink, useNavigate } from "react-router-dom";
 import { useToast } from '@chakra-ui/react';
 import {useSelector} from "react-redux"
+import Navbar from "../Components/Navbar/Navbar";
 
 
 
@@ -39,6 +40,7 @@ const Form1 = () => {
   const handleClick = () => setShow(!show);
   return (
     <>
+
       <Heading w="100%" textAlign={'center'} fontWeight="normal" mb="2%">
         Step-1: User Authentication
       </Heading>
@@ -454,6 +456,7 @@ export default function Checkout() {
   const [progress, setProgress] = useState(33.33);
   return (
     <>
+    <Navbar/>
       <Box
         borderWidth="1px"
         rounded="lg"
