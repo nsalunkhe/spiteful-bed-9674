@@ -12,6 +12,7 @@ import { GiftCarousel } from '../Components/HomeLayouts/GiftCarousel/GiftCarouse
 import { MultiItemCarousel } from '../Components/HomeLayouts/MultiItemCarousel'
 import { ProductCarousel } from '../Components/HomeLayouts/ProductCarousel/ProductCarousel'
 import { TypeCarousel } from '../Components/HomeLayouts/TypeCarousel/TypeCarousel'
+import Navbar from '../Components/Navbar/Navbar'
 import { getProductsData } from '../Components/Products/redux/products.action'
 
 
@@ -74,6 +75,9 @@ const Home = () => {
 
 
   return (
+    <>
+    <Navbar/>
+    
     <Box w={"100%"}>
       <UnorderedList m={"30px auto"} w={"95%"} display={{ base: "none", sm: "none", md: "block", lg: "block" }}>
 
@@ -221,6 +225,7 @@ const Home = () => {
 
       <Footer />
     </Box>
+    </>
   )
 }
 

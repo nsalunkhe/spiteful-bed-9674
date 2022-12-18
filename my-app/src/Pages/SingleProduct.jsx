@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useLocation } from 'react-router-dom'
 import { additem } from '../Components/Cart/Redux/cart.actions'
+import Navbar from '../Components/Navbar/Navbar'
 import ProductImage from '../Components/SingleProduct/ProductImage'
 
 const SingleProduct = () => {
@@ -15,6 +16,8 @@ const SingleProduct = () => {
 
 
     return (
+        <>
+        <Navbar/>
         <Box padding="2%">
             {/* <SimpleGrid columns={[1, 1, 2, 2]}> */}
 
@@ -114,6 +117,7 @@ const SingleProduct = () => {
             </Box>
             {/* </SimpleGrid> */}
         </Box>
+        </>
     )
 }
 

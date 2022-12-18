@@ -5,9 +5,8 @@ import { useEffect } from 'react'
 import { fetchProducts,removeItem } from '../Components/Cart/Redux/cart.actions'
 
 import { NavLink } from 'react-router-dom'
-import Navbar from "../Components/Navbar/Navbar"
 import MapCartData from '../Components/Cart/mapCartData'
-
+import Navbar from "../Components/Navbar/Navbar"
 
 
 
@@ -29,6 +28,7 @@ const Cart = () => {
     return  tot+(item.variant_price*item.qty)
 },0)
   return (
+    
     <Box>
       <Navbar/>
        <Box    m={"30px auto"}
