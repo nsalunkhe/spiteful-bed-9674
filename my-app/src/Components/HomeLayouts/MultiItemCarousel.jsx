@@ -50,8 +50,8 @@ export const MultiItemCarousel = ({ data = [] }) => {
         <VStack lineHeight={"15px"} m={"auto"} w={"90%"}>
           <Image src={banner1} width={"100%"} alt={"banner1"} />
           <Text pb={"5px"} fontSize={"20px"} fontWeight={"bold"} >Last-Minute Gifts</Text>
-          <Text>Just what they wanted, just in time. Need it now?</Text>
-          <Text>Buy online and pick up the same day in store.</Text>
+          <Text fontSize={"14px"} >Just what they wanted, just in time. Need it now?</Text>
+          <Text fontSize={"14px"} >Buy online and pick up the same day in store.</Text>
           <HStack pt={"10px"} fontWeight={"500"} fontSize={"14px"} align={"center"} justify={"center"}>
             <Link textDecor={"underline"}>Stocking Stuffers</Link>
             <Link textDecor={"underline"}>Last-Minute Gifts</Link>
@@ -62,7 +62,7 @@ export const MultiItemCarousel = ({ data = [] }) => {
         <VStack m={"auto"} w={"90%"}>
           <img src={banner2} width={"100%"} alt={"banner2"} />
           <Text pb={"5px"} fontSize={"20px"} fontWeight={"500"}>Hurry! Prices May Change</Text>
-          <Link fontWeight={"500"} fontSize={"14px"} textDecor={"underline"}>Limited-Time Sale</Link>
+          <Text textAlign={"center"} cursor={"pointer"} fontWeight={"500"} fontSize={"14px"} textDecor={"underline"}>Limited-Time Sale</Text>
         </VStack>
 
       </Slider>

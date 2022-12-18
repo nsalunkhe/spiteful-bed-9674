@@ -83,9 +83,11 @@ export const ProductCarousel = ({ data = [], boolean }) => {
             <Slider {...settings} prevArrow={<Prev />} nextArrow={<Next />} >
 
                 {
-                    boolean && <Stack justify={"space-between"} w={"220px"} h={"380px"} p={"10px"} m={"auto"} boxSizing={"border-box"}>
-                        <Image src={"/Homepage/img12.webp"} h={"80%"} alt="demo" m={"auto"} />
-                        <Button m={"0"} w={"186px"} colorScheme={"pink"}>Shop Now</Button>
+                    boolean && <Stack justify={"center"} align={"center"} w={"220px"} h={"380px"} p={"10px"} m={"auto"} boxSizing={"border-box"}>
+                        <Stack h={"100%"} justify={"space-between"} align={"center"}>
+                            <Image src={"/Homepage/img12.webp"} h={"80%"} alt="demo" />
+                            <Button w={"186px"} colorScheme={"pink"}>Shop Now</Button>
+                        </Stack>
                     </Stack>
                 }
 
