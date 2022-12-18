@@ -4,9 +4,9 @@ export const GET_CART_ITEMS_SUCCESS = "cart/items/get/success";
 export const GET_CART_ITEMS_ERROR = "cart/items/get/error";
 
 // add item to cart
-// export const ADD_ITEM_TO_CART_LOADING = "cart/items/add/laoding";
-// export const ADD_ITEM_TO_CART_SUCCESS = "cart/items/add/success";
-// export const ADD_ITEM_TO_CART_ERROR = "cart/items/add/error";
+export const ADD_ITEM_TO_CART_LOADING = "cart/items/add/laoding";
+export const ADD_ITEM_TO_CART_SUCCESS = "cart/items/add/success";
+export const ADD_ITEM_TO_CART_ERROR = "cart/items/add/error";
 
 // // update cart items
 // export const UPDATE_CART_ITEMS_LOADING = "cart/items/update/laoding";

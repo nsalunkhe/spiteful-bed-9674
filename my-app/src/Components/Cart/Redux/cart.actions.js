@@ -6,9 +6,9 @@ import {
   GET_CART_ITEMS_LOADING,
   GET_CART_ITEMS_SUCCESS,
   GET_CART_ITEMS_ERROR,
-  // ADD_ITEM_TO_CART_LOADING,
-  // ADD_ITEM_TO_CART_SUCCESS,
-  // ADD_ITEM_TO_CART_ERROR,
+  ADD_ITEM_TO_CART_LOADING,
+  ADD_ITEM_TO_CART_SUCCESS,
+  ADD_ITEM_TO_CART_ERROR,
   // UPDATE_CART_ITEMS_LOADING,
   // UPDATE_CART_ITEMS_SUCCESS,
   // UPDATE_CART_ITEMS_ERROR,
@@ -29,15 +29,14 @@ export const fetchProducts = async (disptach) => {
     .catch(() => disptach({ type: GET_CART_ITEMS_ERROR }));
 };
 
-// export const additem = (cartInfo) => (dispatch) => {
-//   dispatch({ type: ADD_ITEM_TO_CART_LOADING });
-//   return axios
-//     .post("http://localhost:8080/Cartitems", { ...cartInfo })
-//     .then(({ data }) => {
-//       dispatch({ type: ADD_ITEM_TO_CART_SUCCESS, payload: data });
-//     })
-//     .catch(() => dispatch({ type: ADD_ITEM_TO_CART_ERROR }));
-// };
+export const additem = (cartInfo) => async(dispatch) => {
+  dispatch({ type: ADD_ITEM_TO_CART_LOADING });
+  return axios.post("http://localhost:8080/Cartitems", { ...cartInfo })
+    .then((res) => {
+      dispatch({ type: ADD_ITEM_TO_CART_SUCCESS, payload: res.data });
+    })
+    .catch(() => dispatch({ type: ADD_ITEM_TO_CART_ERROR }));
+};
 
 export const removeItem = (cartId) =>async (dispatch) => {
   dispatch({ type: REMOVE_CART_ITEMS_LOADING });
