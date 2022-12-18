@@ -1,7 +1,7 @@
 .login-main-container,
 .signup-main-container {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   margin: auto;
   display: grid;
   align-items: center;
@@ -135,4 +135,81 @@ p {
   cursor: pointer;
   width: 18px;
   height: 18px;
+}
+.auth-nav {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
+  background-color: black;
+}
+.auth-nav a {
+  width: 10%;
+  cursor: pointer;
+}
+@media only screen and (max-width: 930px) {
+  .login-main-container,
+  .signup-main-container {
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+  }
+  .signup-main-container {
+    width: 100vw;
+  }
+  .login-main-container .login-container,
+  .signup-main-container .login-container {
+    height: 50%;
+    margin-top: 10%;
+  }
+  .login-main-container .auth-image-container,
+  .signup-main-container .auth-image-container {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .login-main-container {
+    width: 85vw;
+  }
+  .login-main-container .login-container,
+  .signup-main-container .login-container {
+    height: 70%;
+  }
+
+  .login-container .google-login > div {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .login-main-container {
+    width: 99vw;
+  }
+  .login-main-container .login-container,
+  .signup-main-container .login-container {
+    height: 60%;
+  }
+  .login-container .google-login > div {
+    font-size: 14px;
+  }
+
+  .auth-nav {
+    padding: 3px 10px;
+  }
+  .auth-nav a {
+    width: 25%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .login-main-container .login-container,
+  .signup-main-container .login-container {
+    height: 75%;
+  }
+  .login-container .google-login > div {
+    font-size: 12px;
+  }
 }

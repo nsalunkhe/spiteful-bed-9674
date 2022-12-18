@@ -10,11 +10,13 @@ import {
 
 import { SearchIcon } from "@chakra-ui/icons";
 import imageAddress from "../../Asset/logo_main.png";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { BsHandbag } from "react-icons/bs";
 import { RxHamburgerMenu } from "react-icons/rx";
+
 import "./Navbar.css";
+import { AuthContext } from "../../Context/AuthContext/AuthContextProvider";
 
 const NavbarTop = () => {
   window.addEventListener("click", (e) => {
@@ -27,14 +29,19 @@ const NavbarTop = () => {
   function openfun() {
     document.querySelector(".sidebar").classList.toggle("display-sidebar");
   }
+
+  const auth = useContext(AuthContext);
+  const { user, logOut, isAdmin, isAuth } = auth;
   // console.log("isAdmin is", isAdmin);
-  // const logoutHandler = async () => {
-  //   try {
-  //     await logOut();
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
+  console.log("user is", user);
+  const logoutHandler = async () => {
+    try {
+      await logOut();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <Flex
       className="navbar-top"
@@ -87,10 +94,9 @@ const NavbarTop = () => {
           <div className="user-menu">
             <div className="login-user">
               <Link to={"/login"}>
-                {/* {user ? user.displayName || "Guest" : "Login"} */}
-                Login
+                {user ? user.displayName || "Guest" : "Login"}
               </Link>
-              {/* <p className="admin-text">{isAdmin && isAuth ? "admin" : null}</p> */}
+              <p className="admin-text">{isAdmin && isAuth ? "admin" : null}</p>
             </div>
             <div className="login-menu">
               <div>
@@ -114,7 +120,7 @@ const NavbarTop = () => {
                 <Link to={"/orders"}>My Orders</Link>
               </div>
             </div>
-            {/* {isAdmin && isAuth ? (
+            {isAdmin && isAuth ? (
               <div className="login-menu">
                 <div>
                   <i className="fa-solid fa-user-tie"></i>
@@ -123,7 +129,7 @@ const NavbarTop = () => {
                   <Link to={"/adminpanel"}>Admin Panel</Link>
                 </div>
               </div>
-            ) : null} */}
+            ) : null}
             <div className="login-menu">
               <div>
                 <i className="fa-regular fa-circle-question"></i>
@@ -136,11 +142,11 @@ const NavbarTop = () => {
               </div>
               <div>Contact Preferances</div>
             </div>
-            {/* {user ? (
+            {user ? (
               <div className="login-user" onClick={logoutHandler}>
                 <Link to={"/login"}>Logout</Link>
               </div>
-            ) : null} */}
+            ) : null}
           </div>
         </div>
         <div className="wishlist">
@@ -161,10 +167,11 @@ const NavbarTop = () => {
             <div id="mob-user-menu">
               <div className="login-user">
                 <Link to={"/login"}>
-                  {/* {user ? user.displayName || "Guest" : "Login"} */}
-                  Login
+                  {user ? user.displayName || "Guest" : "Login"}
                 </Link>
-                {/* <p className="admin-text">{isAdmin && isAuth ? "admin" : null}</p> */}
+                <p className="admin-text">
+                  {isAdmin && isAuth ? "admin" : null}
+                </p>
               </div>
               <div className="login-menu">
                 <div>
@@ -188,16 +195,16 @@ const NavbarTop = () => {
                   <Link to={"/orders"}>My Orders</Link>
                 </div>
               </div>
-              {/* {isAdmin && isAuth ? (
-              <div className="login-menu">
-                <div>
-                  <i className="fa-solid fa-user-tie"></i>
+              {isAdmin && isAuth ? (
+                <div className="login-menu">
+                  <div>
+                    <i className="fa-solid fa-user-tie"></i>
+                  </div>
+                  <div>
+                    <Link to={"/adminpanel"}>Admin Panel</Link>
+                  </div>
                 </div>
-                <div>
-                  <Link to={"/adminpanel"}>Admin Panel</Link>
-                </div>
-              </div>
-            ) : null} */}
+              ) : null}
               <div className="login-menu">
                 <div>
                   <i className="fa-regular fa-circle-question"></i>
@@ -210,11 +217,11 @@ const NavbarTop = () => {
                 </div>
                 <div>Contact Preferances</div>
               </div>
-              {/* {user ? (
-              <div className="login-user" onClick={logoutHandler}>
-                <Link to={"/login"}>Logout</Link>
-              </div>
-            ) : null} */}
+              {user ? (
+                <div className="login-user" onClick={logoutHandler}>
+                  <Link to={"/login"}>Logout</Link>
+                </div>
+              ) : null}
             </div>
             <div className="mob-categories">Categories</div>
             <ul>
