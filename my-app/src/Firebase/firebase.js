@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "@firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APPLICATION_ID,
+  apiKey: "AIzaSyDANsb8v4IG6DZ1qUgk8gGkg7bG0hOnV68",
+  authDomain: "nord-ecommerce.firebaseapp.com",
+  projectId: "nord-ecommerce",
+  storageBucket: "nord-ecommerce.appspot.com",
+  messagingSenderId: "965514706033",
+  appId: "1:965514706033:web:59013960a90fd057066fd0",
 };
 
 // Initialize Firebase
