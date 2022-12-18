@@ -15,6 +15,8 @@ import {
   REMOVE_CART_ITEMS_LOADING,
   REMOVE_CART_ITEMS_SUCCESS,
   REMOVE_CART_ITEMS_ERROR,
+  Increment,
+  Decrement
 } from "./cart.types";
 
 export const fetchProducts = async (disptach) => {
@@ -58,3 +60,15 @@ export const removeItem = (cartId) =>async (dispatch) => {
 //     })
 //     .catch(() => dispatch({ type: UPDATE_CART_ITEMS_ERROR }));
 // };
+
+
+export const increaseCartQuantity = (id) => ({
+  type: Increment,
+  payload: id
+});
+
+      
+export const decreaseCartQuantity = (id) => ({
+  type: Decrement,
+  payload: id
+});

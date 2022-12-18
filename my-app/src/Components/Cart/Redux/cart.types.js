@@ -17,3 +17,6 @@ export const ADD_ITEM_TO_CART_ERROR = "cart/items/add/error";
 export const REMOVE_CART_ITEMS_LOADING = "cart/items/remove/laoding";
 export const REMOVE_CART_ITEMS_SUCCESS = "cart/items/remove/success";
 export const REMOVE_CART_ITEMS_ERROR = "cart/items/remove/error";
+
+export const Increment="cart/increment";
+export const Decrement="cart/decrement";

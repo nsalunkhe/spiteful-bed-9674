@@ -2,7 +2,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { GrNext, GrPrevious } from 'react-icons/gr';
-import { Box, HStack, Link, Text, VStack } from '@chakra-ui/react';
+import { Box, HStack, Link, Text, Image, VStack } from '@chakra-ui/react';
 
 const banner1 = "/Homepage/img6.png"
 const banner2 = "/Homepage/img7.png"
@@ -48,7 +48,7 @@ export const MultiItemCarousel = ({ data = [] }) => {
       <Slider {...settings} prevArrow={<Prev />} nextArrow={<Next />} slidesToShow={1} slidesToScroll={1} >
 
         <VStack lineHeight={"15px"} m={"auto"} w={"90%"}>
-          <img src={banner1} width={"100%"} alt={"banner1"} />
+          <Image src={banner1} width={"100%"} alt={"banner1"} />
           <Text pb={"5px"} fontSize={"20px"} fontWeight={"bold"} >Last-Minute Gifts</Text>
           <Text>Just what they wanted, just in time. Need it now?</Text>
           <Text>Buy online and pick up the same day in store.</Text>

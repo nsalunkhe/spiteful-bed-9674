@@ -5518,6 +5518,27 @@
       ],
       "type": "Clothing/Men/Kurtas/House of Pataudi/More by House of Pataudi",
       "ideal_for": "Men",
+      "is_in_stock": "In Stock
+    },
+    {
+      "id": 1314889,
+      "title": "Dupatta Bazaar Pink Dupatta",
+      "brand": "Dupatta Bazaar",
+      "size": "Onesize",
+      "product_type": "Dupatta",
+      "variant_price": 349,
+      "variant_mrp": 499,
+      "dominant_material": "Chiffon",
+      "care_instructions": "Chiffon | Hand-wash",
+      "actual_color": "Pink",
+      "dominant_color": "Pink",
+      "images": [
+        "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070320-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-1.jpg",
+        "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070226-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-2.jpg",
+        "http://assets.myntassets.com/v1/assets/images/1314889/2016/4/20/11461153070149-Dupatta-Bazaar-Black--Beige-Checked-Dupatta-1961461153069992-3.jpg"
+      ],
+      "type": "Clothing/Women/Dupatta/Dupatta Bazaar/More by Dupatta Bazaar",
+      "ideal_for": "Women",
       "is_in_stock": "In Stock"
     },
     {
