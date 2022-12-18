@@ -29,7 +29,7 @@ const Quantity = ({id,quantity}) => {
    
         <Button disabled={quantity==1} onClick={ () => dispatch(decreaseCartQuantity(id)) }>-</Button>
 
-            <Text fontSize='3xl' >{ quantity }</Text>
+            <Text fontSize='xl' >{ quantity }</Text>
 
         <Button onClick={ () => dispatch(increaseCartQuantity(id)) } >+</Button>
 
