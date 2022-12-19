@@ -80,10 +80,14 @@ a {
 .navbar-bottom > ul > li:hover {
   border-bottom: 2px solid #ea4636;
   background-color: #eee;
+  background-color: black;
   color: black;
 }
 .navbar-bottom > ul > li:hover a {
   color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
 }
 .navbar-bottom > ul > li a:hover {
   color: #ea4636;
@@ -95,7 +99,9 @@ a {
   left: 5vw;
   top: 53px;
   padding: 15px;
-  background-color: #eee;
+  /* background-color: #eee; */
+  background-color: black;
+
   box-shadow: -2px 2px 70px -25px rgba(0, 0, 0, 0.3);
   transition: all ease;
   opacity: 0;
@@ -103,6 +109,7 @@ a {
   z-index: 9;
   font-family: "Roboto Mono";
   color: rgb(16, 16, 16);
+  color: white;
 }
 .navbar-bottom > ul > li:hover .menubar {
   visibility: visible;
@@ -138,6 +145,7 @@ a {
 .sidebar #mob-user-menu > .login-menu {
   background-color: white;
   color: black;
+
   display: grid;
   grid-template-columns: 2.5fr 7.5fr;
   align-items: center;
@@ -193,7 +201,7 @@ a {
   font-size: 20px;
 }
 .image-logo {
-  height: 60px;
+  height: 50px;
 }
 .hamburger,
 #mob-wishlist {
@@ -245,6 +253,9 @@ a {
   display: none;
   margin-bottom: 50px;
 }
+.navbar-top {
+  padding: 5px 0;
+}
 @media only screen and (max-width: 1340px) {
   #bottom-navbar,
   .wishlist {
@@ -272,12 +283,19 @@ a {
   }
 }
 @media only screen and (max-width: 940px) {
+  .image-logo {
+    height: 40px;
+  }
+
   .user {
     display: none;
   }
   .sidebar {
     width: 40vw;
     right: -40vw;
+  }
+  #searchbar {
+    width: 45vw;
   }
 }
 @media only screen and (max-width: 770px) {
@@ -297,7 +315,7 @@ a {
 }
 @media only screen and (max-width: 550px) {
   .image-logo {
-    height: 30px;
+    height: 25px;
   }
   .navbar-top {
     padding: 5px 0;

@@ -63,7 +63,7 @@ const Dresses_menubar = () => {
                 src="https://images.asos-media.com/products/asos-design-curve-boyfriend-sweatshirt-in-white/13800847-1-white?$n_640w$&wid=634&fit=constrain"
               />
             </div>
-            <p>ASOS Curve & Plus size</p>
+            <p>ASOS Curve</p>
           </div>
           <div>
             <div className="menubar-images">

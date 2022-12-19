@@ -35,6 +35,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  font-size: 16px;
 }
 .new_menu .submenu2 .menubar-images {
   align-self: center;
