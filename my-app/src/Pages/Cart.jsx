@@ -26,6 +26,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import MapCartData from "../Components/Cart/mapCartData";
 import Discount from "./Discount.jpg";
 import payimg from "./payimg.png"
+import { render } from "@testing-library/react";
 
 
 
@@ -76,23 +77,27 @@ function Summary({
 const Cart = () => {
   const [promoCode, setPromoCode] = React.useState("");
   const [discountPercent, setDiscountPercent] = React.useState(0);
-
-  const toast=useToast()
+const [count,setCount] = useState(0);
   const cartProducts = useSelector((store) => store.cartManager.data);
 
   const toast = useToast()
 
   const dispatch = useDispatch();
-  const [boolean,setBoolean] = useState(false)
+
   console.log(cartProducts);
   useEffect(() => {
     dispatch(fetchProducts);
+    console.log("render")
 
-  }, [boolean]);
+  }, [count]);
 
   const handleRemove = (id) => {
     dispatch(removeItem(id));
-    setBoolean(!boolean)
+    setCount(prev=>prev+1);
+setTimeout(()=>{
+  dispatch(fetchProducts);
+
+},1000)  
   };
 
   const subTotal = cartProducts.reduce((tot, item) => {
@@ -141,17 +146,30 @@ const Cart = () => {
     });
   };
 
+ 
   return (
     <>
       <Navbar />
+
 
       <Box w={"100%"} m={"auto"} >
 
         <Grid m={"auto"} w="95%" templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(2, 70% 30%)", lg: "repeat(2, 70% 30%)" }} p={"20px 0px"}>
 
+          {(cartProducts.length==0)?  <Box>
+            <Heading mb={"20px"}>Your Nordstrom Cart is empty.</Heading>
+
+              <Button p={"5px 0px"} w={"100%"} colorScheme={"green"}>
+               <NavLink to="/Products">Continue For Shoping</NavLink>
+           </Button>
+
+
+             </Box>:
+
+          
           <Box>
             <MapCartData Products={cartProducts} handleRemove={handleRemove} />
-          </Box>
+          </Box>}
 
           <UnorderedList display={{ base: "none", sm: "none", md: "block", lg: "block" }} >
             <VStack h={"100%"} w={"100%"} justify={"center"} align={"center"}>

@@ -70,8 +70,8 @@ const NavbarBottom = () => {
     <>
       <Flex paddingLeft={20} className="navbar-bottom" id="bottom-navbar">
         <ul>
-          {menubarOptions.map((el,i) => (
-            <li key={i}
+          {menubarOptions.map((el) => (
+            <li
               onMouseOver={() => {
                 menubar_dispatcher({ type: el });
               }}

@@ -34,7 +34,7 @@ const SignUp = () => {
     } catch (error) {
       setError(error.message);
     }
-    axios.post(`https://nord-stom-data.vercel.app/users`, user);
+    axios.post(`http://localhost:8080/users`, user);
   };
   useEffect(() => {
     error &&

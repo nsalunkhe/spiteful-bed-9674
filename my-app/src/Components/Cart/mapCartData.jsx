@@ -1,16 +1,23 @@
-
-import { Select, Box, Heading, HStack, Img, SimpleGrid, Spacer, Button, Flex, Text, useToast, Grid, VStack, Stack } from '@chakra-ui/react'
-
-import React, { useEffect, useState, useReducer } from 'react'
+import { Select, Box, Heading, HStack, Img, SimpleGrid, Spacer, Button, Flex, Text, useToast, Grid, VStack, Stack, } from '@chakra-ui/react'
+import React, { useEffect, useState,useReducer } from 'react'
 import Quantity from './quantity'
-const MapCartData = ({ Products, handleRemove }) => {
+
+
+
+
+const MapCartData = ({Products,handleRemove}) => {
+ 
+ const toast = useToast()
+
   
-  const toast = useToast()
+
+
   return (
+   
     <Box width="100%">{
-      Products.map((prod) => {
-        return (
-          <Grid templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(2, 70% 30%)", lg: "repeat(2, 70% 30%)" }} key={prod.id} m={"20px 0px"}>
+     
+       Products.map((prod)=>{
+            return   <Grid templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(2, 70% 30%)", lg: "repeat(2, 70% 30%)" }} key={prod.id} m={"20px 0px"}>
 
             <HStack>
               <Img height="200px" width="150px" src={prod.images[0]} alt="product image" />
@@ -41,13 +48,17 @@ const MapCartData = ({ Products, handleRemove }) => {
                 duration: 9000,
                 isClosable: true,
               })
-               }}>Remove</Button>
+                }}>Remove</Button>
               </Stack>
             </Grid>
           </Grid>
-    
-      })}
+                  })}
+
+       
+      
     </Box>
+   
   )
 }
+
 export default MapCartData

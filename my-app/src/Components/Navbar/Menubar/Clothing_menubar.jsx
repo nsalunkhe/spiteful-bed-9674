@@ -87,7 +87,7 @@ const Clothing_menubar = () => {
                 alt="clothing "
               />
             </div>
-            <p>ASOS Curve & Plus size</p>
+            <p>ASOS Curve</p>
           </div>
           <div>
             <div className="menubar-images">
