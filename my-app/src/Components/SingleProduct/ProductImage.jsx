@@ -3,9 +3,9 @@ import React from 'react'
 
 const ProductImage = ({img}) => {
   return (
-    <Box>
+    <Box height="100%" >
       
-        <Image width="80%" src={img}/>
+        <Image height="100%" src={img}/>
     </Box>
   )
 }

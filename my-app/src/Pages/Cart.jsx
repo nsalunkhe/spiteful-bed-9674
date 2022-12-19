@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Grid,
   Box,
@@ -74,18 +74,20 @@ const Cart = () => {
   const [promoCode, setPromoCode] = React.useState("");
   const [discountPercent, setDiscountPercent] = React.useState(0);
 
+  const toast=useToast()
   const cartProducts = useSelector((store) => store.cartManager.data);
- const toast=useToast()
   const dispatch = useDispatch();
+  const [boolean,setBoolean] = useState(false)
   console.log(cartProducts);
   useEffect(() => {
     dispatch(fetchProducts);
-  }, []);
+
+  }, [boolean]);
 
   const handleRemove = (id) => {
     dispatch(removeItem(id));
-  
-    dispatch(fetchProducts);
+    
+    setBoolean(!boolean)
   };
 
   const subTotal = cartProducts.reduce((tot, item) => {
@@ -152,7 +154,7 @@ const Cart = () => {
             <MapCartData Products={cartProducts} handleRemove={handleRemove} />
           </Box>
 
-          <Image width="30%" src={Discount} />
+          <Image width="30%"  src={Discount} />
         </Flex>
       </Grid>
 

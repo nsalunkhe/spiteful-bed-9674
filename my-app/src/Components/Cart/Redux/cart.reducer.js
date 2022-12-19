@@ -93,7 +93,7 @@ export const cartReducer = (state = initalState, { type, payload }) => {
       return { ...state, loading: true, error: false  };
     }
     case REMOVE_CART_ITEMS_SUCCESS: {
-      const uitems = state.data.filter((cI) => cI.id !== payload.id);
+      const uitems = state.data.filter((cI) => cI.id !== payload);
       return { ...state, data: uitems,  loading: false } };
     
     case REMOVE_CART_ITEMS_ERROR: {
