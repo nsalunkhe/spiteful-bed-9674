@@ -10,7 +10,10 @@ import {
   UnorderedList,
   Input,
   Image,
-  useToast
+  useToast,
+  VStack,
+  HStack,
+  Stack
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
@@ -39,32 +42,32 @@ function Summary({
   return (
     <section className="container">
       <Box>
-        <ul>
-          <li>
-            Subtotal <span style={{fontWeight:"bold",marginLeft:"30px"}}>₹{subTotal}</span>
-          </li>
+        <VStack>
+          <HStack w={"100%"} justify={"space-between"} align={"center"}>
+            <Text>Subtotal</Text> <Text fontWeight={"bold"} letterSpacing={"2px"}>₹{subTotal}</Text>
+          </HStack>
           {discount > 0 && (
-            <li>
-              Discount <span style={{fontWeight:"bold",marginLeft:"30px"}}>₹{discount}</span>
-            </li>
+            <HStack w={"100%"} justify={"space-between"} align={"center"}>
+              <Text>Discount</Text> <Text fontWeight={"bold"} letterSpacing={"2px"}>₹{discount}</Text>
+            </HStack>
           )}
 
-          <li>
-            Tax<span style={{fontWeight:"bold",marginLeft:"30px"}}>{tax}%</span>
-          </li>
-          <li className="total">
-            Total <span style={{fontWeight:"bold",marginLeft:"30px"}}>₹{total}</span>
-          </li>
-        </ul>
+          <HStack w={"100%"} justify={"space-between"} align={"center"}>
+            <Text>Tax</Text> <Text fontWeight={"bold"} letterSpacing={"2px"}>{tax}%</Text>
+          </HStack>
+          <HStack w={"100%"} justify={"space-between"} align={"center"}>
+            <Text>Total</Text> <Text fontWeight={"bold"} letterSpacing={"2px"}>₹{total}</Text>
+          </HStack>
+        </VStack>
 
-        <Flex>
+        <VStack>
           <Input
             placeholder="Apply Promocode"
             type="text"
             onChange={onEnterPromoCode}
           />
-          <Button onClick={checkPromoCode}>Apply</Button>
-        </Flex>
+          <Button w={"100%"} onClick={checkPromoCode}>Apply</Button>
+        </VStack>
       </Box>
     </section>
   );
@@ -76,6 +79,9 @@ const Cart = () => {
 
   const toast=useToast()
   const cartProducts = useSelector((store) => store.cartManager.data);
+
+  const toast = useToast()
+
   const dispatch = useDispatch();
   const [boolean,setBoolean] = useState(false)
   console.log(cartProducts);
@@ -86,7 +92,6 @@ const Cart = () => {
 
   const handleRemove = (id) => {
     dispatch(removeItem(id));
-    
     setBoolean(!boolean)
   };
 
@@ -132,57 +137,66 @@ const Cart = () => {
       status: "error",
       duration: 2000,
       isClosable: true,
-      position:"top"
+      position: "top"
     });
   };
 
   return (
-    <Box>
+    <>
       <Navbar />
 
-      <Grid width="100%" border="1px solid" padding="5%" margin="auto">
-        <Flex
-          width="100%"
-          gap="50px"
-          margin="auto"
-          justifyContent="space-between"
-        >
-          {/* <Text fontSize='2xl' >Your bag is empty</Text>
-          <Text>Sign in to see what you may have saved before, or start shopping now!</Text>    */}
+      <Box w={"100%"} m={"auto"} >
+
+        <Grid m={"auto"} w="95%" templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(2, 70% 30%)", lg: "repeat(2, 70% 30%)" }} p={"20px 0px"}>
 
           <Box>
             <MapCartData Products={cartProducts} handleRemove={handleRemove} />
           </Box>
 
-          <Image width="30%"  src={Discount} />
-        </Flex>
-      </Grid>
+          <UnorderedList display={{ base: "none", sm: "none", md: "block", lg: "block" }} >
+            <VStack h={"100%"} w={"100%"} justify={"center"} align={"center"}>
+              <Image width="100%" src={Discount} />
+            </VStack>
+          </UnorderedList>
 
-      <hr style={{ border: "1px solid gray", margin: "auto", width: "95%" }} />
+        </Grid>
 
-      <Flex padding="5%" justifyContent="space-between" width="100%">
-        <Box>
-          <Text textAlign="left">Accepted Payment Methods</Text>
-          <Image width="30%" src={payimg}/>
-          <Text textAlign="left">Need help? Call 1.888.282.6060 or chat with us</Text>
-          <Text textAlign="left">Shipping internationally?</Text>
-        </Box>
-        <Box>
-          <Heading size={"md"}>Order Summary</Heading>
+        <hr style={{ border: "1px solid gray", margin: "auto", width: "95%" }} />
 
-          <Summary
-            subTotal={subTotal}
-            discount={discount}
-            tax={TAX}
-            onEnterPromoCode={onEnterPromoCode}
-            checkPromoCode={checkPromoCode}
-          />
-          <Button width="100%" marginTop="30px" backgroundColor="black" color="white">
-            <NavLink to="/Checkout">Checkout</NavLink>
-          </Button>
-        </Box>
-      </Flex>
-    </Box>
+        <Grid m={"auto"} w="95%" templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)", lg: "repeat(2, 1fr)" }} p={"20px 0px"}>
+          <Box pt={"10px"} mb={"20px"} fontSize={{base:"16px", sm:"15px", md:"16px", lg:"18px"}}>
+            <Text fontSize={{base:"17px", sm:"17px", md:"17px", lg:"18px"}} textAlign="left" fontWeight={"bold"}>Accepted Payment Methods</Text>
+            <HStack m={"5px 0"}>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/04/Regalia-HDFC.png.webp" style={{ width: "10%", height: "100%"}}></Image>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2017/10/simplysave-credit-card.jpg.webp" style={{ width: "10%", height: "100%", marginLeft: "10px" }}></Image>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2017/10/ICICI-Coral-Contactless-Card.jpg.webp" style={{ width: "10%", height: "100%", marginLeft: "10px" }}></Image>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2019/11/222.png.webp" style={{ width: "10%", height: "100%", marginLeft: "10px" }}></Image>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2017/10/Citi-Cash-Back-Credit-Card.jpg.webp" style={{ width: "10%", height: "100%", marginLeft: "10px" }}></Image>
+              <Image src="https://www.paisabazaar.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2017/10/YES-Prosperity-Rewards-Plus.jpg.webp" style={{ width: "10%", height: "100%", marginLeft: "10px" }}></Image>
+            </HStack>
+            <Text textAlign="left">Need help? Call 1.888.282.6060 or chat with us</Text>
+            <Text textAlign="left">Shipping internationally?</Text>
+          </Box>
+          
+          <Box>
+          <Stack w={"100%"} m={"auto"} pt={"10px"}>
+            <Heading size={"md"} textAlign="center">Order Summary</Heading>
+
+            <Summary
+              subTotal={subTotal}
+              discount={discount}
+              tax={TAX}
+              onEnterPromoCode={onEnterPromoCode}
+              checkPromoCode={checkPromoCode}
+            />
+            <Button p={"5px 0px"} w={"100%"} colorScheme={"green"}>
+              <NavLink to="/Checkout">Checkout</NavLink>
+            </Button>
+          </Stack>
+          </Box>
+        </Grid>
+      </Box>
+    </>
   );
 };
 
