@@ -1,7 +1,11 @@
-import { Select, Box, Heading, HStack, Img, SimpleGrid, Spacer, Button, Flex, Text, Grid, VStack, Stack } from '@chakra-ui/react'
+
+import { Select, Box, Heading, HStack, Img, SimpleGrid, Spacer, Button, Flex, Text, useToast, Grid, VStack, Stack } from '@chakra-ui/react'
+
 import React, { useEffect, useState, useReducer } from 'react'
 import Quantity from './quantity'
 const MapCartData = ({ Products, handleRemove }) => {
+  
+  const toast = useToast()
   return (
     <Box width="100%">{
       Products.map((prod) => {
@@ -28,11 +32,20 @@ const MapCartData = ({ Products, handleRemove }) => {
                 <Quantity quantity={prod.qty} id={prod.id} />
               </Stack>
               <Stack justify={"center"} align={"flex-start"}>
-                <Button colorScheme={"red"} onClick={() => handleRemove(prod.id)}>Remove</Button>
+                <Button colorScheme={"red"} onClick={() =>{
+               handleRemove(prod.id)
+               toast({
+                title: '"Item Removed From Cart Successfully."',
+                status: 'success',
+                position:"top-right",
+                duration: 9000,
+                isClosable: true,
+              })
+               }}>Remove</Button>
               </Stack>
             </Grid>
           </Grid>
-        )
+    
       })}
     </Box>
   )

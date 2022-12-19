@@ -1,9 +1,19 @@
 import { Box, HStack, Spacer, Stack, Text, UnorderedList, VStack } from '@chakra-ui/react'
 import React from 'react'
-export const Products = ({ title, brand, variant_mrp, variant_price, images }) => {
+import { useNavigate } from 'react-router-dom'
+import SingleProduct from '../../../Pages/SingleProduct'
+export const Products = ({props}) => {
+    const { title, brand, variant_mrp, variant_price, images } = props
+    const navigate = useNavigate()
+
+    const singleProductData = (prod) => {
+        navigate({ pathname: '/SingleProduct' }, { state: prod })
+    } 
+    
 
     return (
-        <Box w={"220px"} h={"380px"} p={"10px"} m={"auto"}>
+        
+        <Box w={"220px"} h={"380px"} p={"10px"} m={"auto"} onClick={()=>{singleProductData(props)}} >
 
             <Stack justify={"space-between"} w={"100%"} h={"100%"} fontSize={"13px"} >
 

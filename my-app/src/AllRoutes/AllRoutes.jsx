@@ -17,6 +17,7 @@ import YoungAdult from "../Components/Home/YoungAdult";
 
 import Cart from "../Pages/Cart";
 import AdminPanel from "../Pages/AdminPanel";
+import SingleProduct from "../Pages/SingleProduct";
 
 export default function AllRoutes() {
   return (
@@ -33,6 +34,7 @@ export default function AllRoutes() {
       <Route path="/Men" element={<Men />}></Route>
       <Route path="/Payment" element={<Payment />}></Route>
       <Route path="/Products" element={<Products />}></Route>
+      <Route path="/SingleProduct" element={<SingleProduct />}></Route>
       <Route path="/Signup" element={<Signup />}></Route>
       <Route path="/Women" element={<Women />}></Route>
       <Route path="/YoungAdult" element={<YoungAdult />}></Route>

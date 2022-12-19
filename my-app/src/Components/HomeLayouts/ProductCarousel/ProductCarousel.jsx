@@ -79,6 +79,7 @@ export const ProductCarousel = ({ data = [], boolean }) => {
             }
         ]
     };
+    
 
     return (
         <Box w={"95%"} m={"auto auto 50px auto"}>
@@ -97,7 +98,7 @@ export const ProductCarousel = ({ data = [], boolean }) => {
 
                 {
                     data?.map((item) => (
-                        <Products key={item.id} {...item} />
+                        <Products key={item.id} props={item} />
                     ))
                 }
 

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Slider from 'react-slick'
+import Navbar from '../Components/Navbar/Navbar'
 import FilterProductsButtons from '../Components/Products/filterProductsButtons'
 import MapData from '../Components/Products/mapData'
 import { getProductsData } from '../Components/Products/redux/products.action'
@@ -41,7 +42,10 @@ const Products = () => {
     getProductsData(dispatch)
   }, [])
   return (
-    <Box marginTop="30px">
+    <>
+
+    <Navbar/>
+    <Box marginTop="10px" >
 
       <Grid templateColumns={{ base: "repeat(1, 100%)", sm: "repeat(1, 100%)", md: "repeat(2, 20% 80%)", lg: "repeat(2, 15% 85%)" }}>
 
@@ -68,6 +72,7 @@ const Products = () => {
 
 
     </Box>
+    </>
   )
 }
 

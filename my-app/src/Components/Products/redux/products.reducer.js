@@ -1,9 +1,10 @@
-import { GET_PRODUCTS_ERROR, GET_PRODUCTS_LOADING, GET_PRODUCTS_SUCCESS } from "./products.action.types"
+import { GET_PRODUCTS_ERROR, GET_PRODUCTS_LOADING, GET_PRODUCTS_SUCCESS, GET_SINGLE_SUCCESS } from "./products.action.types"
 
 const initialState = {
     loading:false,
     error:false,
-    data:[]
+    data:[],
+    singleData:[]
 }
 
 export const ProductReducer = (state=initialState,{type,payload}) =>{
@@ -28,6 +29,13 @@ export const ProductReducer = (state=initialState,{type,payload}) =>{
                 ...state,
                 loading:false,
                 error:true
+            }
+        }
+        case  GET_SINGLE_SUCCESS:{
+            return{
+                ...state,
+                loading:false,
+                singleData:payload,
             }
         }
         default:{
