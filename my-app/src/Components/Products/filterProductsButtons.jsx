@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Checkbox, Heading, Show, Stack, UnorderedList } from '@chakra-ui/react'
 
-const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colorBlue, colorRed, colorPink, setData }) => {
+const FilterProductsButtons = ({ onClose, filtMen, filtWomen,filtBoys,filtGirls, sizeS, sizeM,sizeL,sizeXL,sizeXXL, colorBlue, colorRed, colorPink, colorBlack , colorGreen,colorYellow,setData }) => {
 
   const filterMen = (e) => {
     if (e.target.checked) {
@@ -21,6 +21,24 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
       setData([])
     }
   }
+  const filterBoys = (e) => {
+    if (e.target.checked) {
+      console.log('filterBoys')
+      filtBoys()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+  const filterGirls = (e) => {
+    if (e.target.checked) {
+      filtGirls()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+
   const filtersizeS = (e) => {
     if (e.target.checked) {
       sizeS()
@@ -37,6 +55,31 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
       setData([])
     }
   }
+  const filtersizeL = (e) => {
+    if (e.target.checked) {
+      sizeL()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+  const filtersizeXL = (e) => {
+    if (e.target.checked) {
+      sizeXL()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+  const filtersizeXXL = (e) => {
+    if (e.target.checked) {
+      sizeXXL()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+
   const colorB = (e) => {
     if (e.target.checked) {
       colorBlue()
@@ -61,7 +104,30 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
       setData([])
     }
   }
-
+  const colorBl = (e) => {
+    if (e.target.checked) {
+      colorBlack()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+  const colorG = (e) => {
+    if (e.target.checked) {
+      colorGreen()
+      // return true
+    } else {
+      setData([])
+    }
+  }
+  const colorY = (e) => {
+    if (e.target.checked) {
+      colorYellow()
+      // return true
+    } else {
+      setData([])
+    }
+  }
 
   return (
 
@@ -75,8 +141,8 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
 
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={filterMen} >Mens</Checkbox>
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={filterWomen}>Womens</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >Boys</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >Girls</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={filterBoys}>Boys</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={filterGirls}>Girls</Checkbox>
 
         </Box><hr />
 
@@ -85,9 +151,9 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
 
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={filtersizeS} >S</Checkbox>
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={filtersizeM} >M</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >L</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >XL</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >XXL</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={filtersizeL}>L</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={filtersizeXL}>XL</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={filtersizeXXL}>XXL</Checkbox>
 
         </Box>
         <hr />
@@ -98,9 +164,9 @@ const FilterProductsButtons = ({ onClose, filtMen, filtWomen, sizeS, sizeM, colo
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorB} >Blue</Checkbox>
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorR} >Red</Checkbox>
           <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorP} >Pink</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >Black</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >Green</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' >yellow</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorBl}>Black</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorG}>Green</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' onChange={colorY}>yellow</Checkbox>
 
 
         </Box>

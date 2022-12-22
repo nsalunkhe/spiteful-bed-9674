@@ -12,9 +12,10 @@ import Sliderr from '../Components/Slider'
 
 const Products = () => {
   const [data, setData] = useState([])
+    const [page,setPage] = useState(1)
   const Products = useSelector((store) => (store.productsManager.data))
   const dispatch = useDispatch()
-  console.log(Products)
+  // console.log(Products)
 
   const filtMen = () => {
     setData(Products.filter((prod) => { if (prod.ideal_for === "Men") return prod }))
@@ -22,12 +23,29 @@ const Products = () => {
   const filtWomen = () => {
     setData(Products.filter((prod) => { if (prod.ideal_for === "Women") return prod }))
   }
+  const filtBoys =() => {
+    setData(Products.filter((prod) => { if (prod.ideal_for === "Boys") return prod }))
+  }
+  const filtGirls = () => {
+    setData(Products.filter((prod) => { if (prod.ideal_for === "Girls") return prod }))
+  }
+
   const sizeS = () => {
     setData(Products.filter((prod) => { if (prod.size === "S") return prod }))
   }
   const sizeM = () => {
     setData(Products.filter((prod) => { if (prod.size === "M") return prod }))
   }
+  const sizeL = () => {
+    setData(Products.filter((prod) => { if (prod.size === "L") return prod }))
+  }
+  const sizeXL = () => {
+    setData(Products.filter((prod) => { if (prod.size === "XL") return prod }))
+  }
+  const sizeXXL = () => {
+    setData(Products.filter((prod) => { if (prod.size === "XXL") return prod }))
+  }
+  
   const colorBlue = () => {
     setData(Products.filter((prod) => { if (prod.actual_color === "Blue") return prod }))
   }
@@ -37,9 +55,18 @@ const Products = () => {
   const colorPink = () => {
     setData(Products.filter((prod) => { if (prod.actual_color === "Pink") return prod }))
   }
-  console.log(filtMen)
+  const colorBlack = () => {
+    setData(Products.filter((prod) => { if (prod.actual_color === "Black") return prod }))
+  }
+  const colorGreen  = () => {
+    setData(Products.filter((prod) => { if (prod.actual_color === "Green") return prod }))
+  }
+  const colorYellow = () => {
+    setData(Products.filter((prod) => { if (prod.actual_color === "Yellow") return prod }))
+  }
   useEffect(() => {
-    getProductsData(dispatch)
+    dispatch(getProductsData(page))
+    
   }, [])
   return (
     <>
@@ -51,14 +78,16 @@ const Products = () => {
 
         <UnorderedList display={{ base: "block", sm: "block", md: "none", lg: "none" }} position={"sticky"} top={"0px"}>
 
-          <Sliderr filtMen={filtMen} filtWomen={filtWomen} sizeS={sizeS} sizeM={sizeM} colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} setData={setData} />
+          <Sliderr filtMen={filtMen} filtWomen={filtWomen} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
+           colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} colorBlack={colorBlack} colorGreen={colorGreen} colorYellow={colorYellow} setData={setData} />
 
         </UnorderedList>
 
         <UnorderedList display={{ base: "none", sm: "none", md: "block", lg: "block" }}>
 
           <Box position={"fixed"} left={"0"} pl={"10px"}>
-            <FilterProductsButtons filtMen={filtMen} filtWomen={filtWomen} sizeS={sizeS} sizeM={sizeM} colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} setData={setData} />
+            <FilterProductsButtons filtMen={filtMen} filtWomen={filtWomen} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
+           colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} colorBlack={colorBlack} colorGreen={colorGreen} colorYellow={colorYellow} setData={setData} />
 
           </Box>
 
