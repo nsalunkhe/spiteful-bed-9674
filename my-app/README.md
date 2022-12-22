@@ -3,7 +3,7 @@
 This app is a e-commerce website for fashion and lifestyle products of Mens and Womens and a user can buy the Products from this app.
 
 ## Deployed link of project
-- <a href="https://deft-florentine-9618bc.netlify.app/">Indeed.com (Clone)</a>
+- <a href="https://nord-ecommerce-website.netlify.app/">NordStrom</a>
 
 ## Team Members
 
@@ -35,6 +35,7 @@ On frontend terminal perform:
 - Javascript
 - HTML
 - CSS
+- Chakra UI
 
 
 ## Functionality
