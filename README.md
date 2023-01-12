@@ -68,20 +68,37 @@ On frontend terminal perform:
 
 
 
+
 #### Website Presentation :
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(240).png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(241).png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(242).png)
+ ![Nordstorm-1](https://user-images.githubusercontent.com/101391587/211982959-f0617b0b-7a11-4b77-987c-3af2a9795ed0.png)
+ 
+ ![Nordstorm-2](https://user-images.githubusercontent.com/101391587/211983333-f778981d-5a9a-47d5-a6df-26c35923adfb.png)
+ 
+ ![Nordstorm-4](https://user-images.githubusercontent.com/101391587/211984304-23e651d5-cedd-4b97-b8ba-cc6a1848a7a6.png)
+ 
+ 
+ ![Nordstorm-5](https://user-images.githubusercontent.com/101391587/211984706-548cacf4-fbf4-417a-adc8-4addd13d4018.png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(243).png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(244).png)
+![Nordstorm-6](https://user-images.githubusercontent.com/101391587/211987460-3a7ca7d7-a0a7-4b52-86e1-72e3daf052b1.png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(247).png)
 
-![nordstrom-webite](/spiteful-bed-9674/my-app/src/Components/images/Screenshot%20(248).png)
+ ![Nordstorm-3](https://user-images.githubusercontent.com/101391587/211983633-506b05f4-d6a8-401d-ae70-e93e2eb9c8ca.png)
+
+
+![Nordstorm-7](https://user-images.githubusercontent.com/101391587/211987729-34c31627-67ff-44e1-95b4-44b2be1d1ce2.png)
+
+
+![Nordstorm-8](https://user-images.githubusercontent.com/101391587/211987985-87eeb9f6-b2ed-4e78-8ed8-07d64871298f.png)
+
+
+![Nordstorm-9](https://user-images.githubusercontent.com/101391587/211988132-02bf8490-b55b-49c8-a7bb-1fada029a5c5.png)
+
+
+![Nordstorm-10](https://user-images.githubusercontent.com/101391587/211988327-0c4017a3-d31b-47f1-b8ae-df9a0e0eba3d.png)
+
 ## Thank you note
 Thank you all who is giving precious time to visit our little creative project which is made with lot of efforts.
 
