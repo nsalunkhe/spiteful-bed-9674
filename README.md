@@ -32,6 +32,7 @@ On frontend terminal perform:
   Then you are able to see the app running on your browser
 ```
 
+TO SEE THE ADMIN PANEL YOU MUST NEED TO LOGIN AS ADMIN
 
 
 ## 🛠 Tech Stack
