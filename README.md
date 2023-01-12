@@ -105,6 +105,9 @@ TO SEE THE ADMIN PANEL YOU MUST NEED TO LOGIN AS ADMIN
 
 ![Nordstorm-10](https://user-images.githubusercontent.com/101391587/211988327-0c4017a3-d31b-47f1-b8ae-df9a0e0eba3d.png)
 
+
+![Nordstorm-99](https://user-images.githubusercontent.com/101391587/212197671-efcbc442-c605-401a-b92b-69c40f8b955b.png)
+
 ## Thank you note
 Thank you all who is giving precious time to visit our little creative project which is made with lot of efforts.
 
