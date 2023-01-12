@@ -18,13 +18,18 @@ This app is a e-commerce website for fashion and lifestyle products of Mens and 
 
 ## Deployment
 
+create a folder first 
+
+clone the repository
+
 On frontend terminal perform:
 
 ```bash
- Open my-app folder in terminal
+  cd spiteful-bed-9674  
+  cd my-app
   npm install
-  install all dependancies which you will suggest
   npm start
+  Then you are able to see the app running on your browser
 ```
 
 
