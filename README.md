@@ -3,7 +3,7 @@
 This app is a e-commerce website for fashion and lifestyle products of Mens and Womens and a user can buy the Products from this app.
 
 ## Deployed link of project
-- <a href="https://spiteful-bed-9674.netlify.app/">NordStrom</a>
+- <a href="https://nord-ecommerce-website.netlify.app/">NordStrom</a>
 
 ## Team Members
 
