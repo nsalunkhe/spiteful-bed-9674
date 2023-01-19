@@ -70,7 +70,20 @@ const Products = () => {
   let filtData = Products.filter((el)=> (filtCred.Men? el.ideal_for=="Men":"") || 
                                     (filtCred.Women? el.ideal_for=="Women":"") || 
                                     (filtCred.Boys? el.ideal_for=="Boys":"") ||
-                                    (filtCred.Girls? el.ideal_for=="Girls":"" )
+                                    (filtCred.Girls? el.ideal_for=="Girls":"" )||
+
+                                    (filtCred.S? el.size=="S":"") || 
+                                    (filtCred.M? el.size=="M":"") || 
+                                    (filtCred.L? el.size=="L":"") ||
+                                    (filtCred.XL? el.size=="XL":"" ) ||
+                                    (filtCred.XXL? el.size=="XXL":"" ) ||
+
+                                    (filtCred.Blue? el.actual_color=="Blue":"") || 
+                                    (filtCred.Red? el.actual_color=="Red":"") || 
+                                    (filtCred.Pink? el.actual_color=="Pink":"") ||
+                                    (filtCred.Black? el.actual_color=="Black":"" ) ||
+                                    (filtCred.Green? el.actual_color=="Green":"") ||
+                                    (filtCred.Yellow? el.actual_color=="Yellow":"" )
                                     )
 
   useEffect(() => {

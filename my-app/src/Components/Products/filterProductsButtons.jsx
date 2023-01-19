@@ -162,11 +162,11 @@ const FilterProductsButtons = ({ filtCred, setFiltCred, onClose, filtMen, filtWo
         <Heading textAlign="left" pl={2} size='sm' marginTop="5px">Size</Heading>
         <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
 
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); filtersizeS()}} >S</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); filtersizeM()}} >M</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); filtersizeL()}}>L</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); filtersizeXL()}}>XL</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); filtersizeXXL()}}>XXL</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="S" onChange={(e)=>{check(e); filtersizeS()}} >S</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="M" onChange={(e)=>{check(e); filtersizeM()}} >M</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="L" onChange={(e)=>{check(e); filtersizeL()}}>L</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="XL" onChange={(e)=>{check(e); filtersizeXL()}}>XL</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="XXL" onChange={(e)=>{check(e); filtersizeXXL()}}>XXL</Checkbox>
 
         </Box>
         <hr />
@@ -174,12 +174,12 @@ const FilterProductsButtons = ({ filtCred, setFiltCred, onClose, filtMen, filtWo
         <Heading textAlign="left" pl={2} size='sm' marginTop="5px">Colors</Heading>
         <Box display="flex" flexDirection="column" justifyContent="flex-start" marginTop="10px">
 
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorB()}} >Blue</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorR()}} >Red</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorP()}} >Pink</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorBl()}}>Black</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorG()}}>Green</Checkbox>
-          <Checkbox pl="6" size='sm' colorScheme='green' onChange={(e)=>{check(e); colorY()}}>yellow</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Blue" onChange={(e)=>{check(e); colorB()}} >Blue</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Red" onChange={(e)=>{check(e); colorR()}} >Red</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Pink" onChange={(e)=>{check(e); colorP()}} >Pink</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Black" onChange={(e)=>{check(e); colorBl()}}>Black</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Green" onChange={(e)=>{check(e); colorG()}}>Green</Checkbox>
+          <Checkbox pl="6" size='sm' colorScheme='green' name="Yellow" onChange={(e)=>{check(e); colorY()}}>yellow</Checkbox>
 
 
         </Box>
