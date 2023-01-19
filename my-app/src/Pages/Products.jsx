@@ -15,6 +15,8 @@ const Products = () => {
     const [page,setPage] = useState(1)
   const Products = useSelector((store) => (store.productsManager.data))
   const dispatch = useDispatch()
+  let [filtCred,setFiltCred] = useState({}) 
+  
   // console.log(Products)
 
   const filtMen = () => {
@@ -64,10 +66,19 @@ const Products = () => {
   const colorYellow = () => {
     setData(Products.filter((prod) => { if (prod.actual_color === "Yellow") return prod }))
   }
+
+  let filtData = Products.filter((el)=> (filtCred.Men? el.ideal_for=="Men":"") || 
+                                    (filtCred.Women? el.ideal_for=="Women":"") || 
+                                    (filtCred.Boys? el.ideal_for=="Boys":"") ||
+                                    (filtCred.Girls? el.ideal_for=="Girls":"" )
+                                    )
+
   useEffect(() => {
-    dispatch(getProductsData(page))
-    
+    if(Products.length ==0){
+      dispatch(getProductsData(page))
+    }
   }, [])
+console.log(filtData)
   return (
     <>
 
@@ -78,7 +89,7 @@ const Products = () => {
 
         <UnorderedList display={{ base: "block", sm: "block", md: "none", lg: "none" }} position={"sticky"} top={"0px"}>
 
-          <Sliderr filtMen={filtMen} filtWomen={filtWomen} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
+          <Sliderr filtMen={filtMen} filtWomen={filtWomen} setFiltCred={setFiltCred} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
            colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} colorBlack={colorBlack} colorGreen={colorGreen} colorYellow={colorYellow} setData={setData} />
 
         </UnorderedList>
@@ -86,7 +97,7 @@ const Products = () => {
         <UnorderedList display={{ base: "none", sm: "none", md: "block", lg: "block" }}>
 
           <Box position={"fixed"} left={"0"} pl={"10px"}>
-            <FilterProductsButtons filtMen={filtMen} filtWomen={filtWomen} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
+            <FilterProductsButtons filtCred={filtCred} setFiltCred={setFiltCred} filtMen={filtMen} filtWomen={filtWomen} filtBoys={filtBoys} filtGirls={filtGirls} sizeS={sizeS} sizeM={sizeM} sizeL={sizeL} sizeXL={sizeXL} sizeXXL={sizeXXL} 
            colorBlue={colorBlue} colorRed={colorRed} colorPink={colorPink} colorBlack={colorBlack} colorGreen={colorGreen} colorYellow={colorYellow} setData={setData} />
 
           </Box>
@@ -94,7 +105,7 @@ const Products = () => {
         </UnorderedList>
 
         <Box>
-          <MapData Products={Products} data={data} />
+          <MapData Products={Products} data={filtData} />
         </Box>
 
       </Grid>
